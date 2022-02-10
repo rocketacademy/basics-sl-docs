@@ -1,9 +1,10 @@
 // 1.1: Basic Operations
+// For number addition, subtraction, multiplication, and division examples, it will be best to show it in the browser console because the results will be printed.
 2 + 2;
 4 - 2;
 
-// For multiplication, the students need to remember we can't use 'x' because our computer thinks that x is a variable.
-4 x 2; // This returns unexpected identifier in the console - which refers to x
+// For multiplication, the students need to remember we use '*' instead of 'x'.
+4 x 2; // This returns unexpected identifier in the console - which refers to x. JavaScript thinks 'x' is a name of a variable.
 4 * 2;
 
 // For division, % is modulus - which gives us a positive remainder instead of division
@@ -11,11 +12,11 @@
 5 / 2; // gives us 2.5
 
 // 1.2: Variables
+// We use variables to store data (which can also be a result of a calculation)
+// Useful analogy: We are creating a box called "pi", and we are storing the number 3.14 inside this box.
 var pi = 3.14;
 var radius = 4;
 var area = pi * radius * radius;
-// We use variables to store data(can also be a result of a calculation as seen above)
-// The students can think of it as a box, the name of the variable is a label on the box that allows us to identify it easily, and the box stores data.
 
 // Remember to stress the importance of variable naming.
 // Q3: if they were to look at both statements below without any context beforehand, how would they feel as opposed to var area = pi * radius * radius? Now imagine if there were 500 lines of poorly named variables.
@@ -35,6 +36,7 @@ var string = "My name is" + " Kai."; // strings are denoted with either double o
 // We can use variables that store strings and add them to other strings to form a single combined string
 var myName = "Kai";
 var company = "Rocket Academy";
+// You should demonstrate this example using the browser console so that the results can be printed and viewed.
 "Hi, my name is " + myName + " and I am the founder of " + company;
 
 // Q4: What happens if I add a string of "3" to a num 3? What will we get?
@@ -45,20 +47,20 @@ var result = "3" + num;
 // Adding strings using + is a bit of a hassle especially for long combined strings, so we can use a much more efficient method to do this: its called a template literal.
 var myName = "Kai";
 var company = "Rocket Academy";
+// You should demonstrate this example using the browser console so that the results can be printed and viewed.
 `Hi, my name is ${myName} and I am the founder of ${company}.`; // Template literals are marked with a `. Variables in template literals are marked in ${}. If we don't use that to mark variables, the computer will think its a string and not referring to a var.
 
-// may change to es6 syntax?
-
-// 2.1 Pseudo Code
+// Pseudocode and Comments
 // We can add two forward slashes at the start of a line to mark it as a comment, so our computer ignores it when executing code. Used so we can put plain english in our JS files! But we can also use pseudocode to help us with coding.
 // they can also highlight a bunch of lines and press CTRL(or CMD) + / to immediately mark them as comments.
 
-// example
+// Example:
 // What are the steps to find the area of a circle?
 
 // We know that area = pi * radius * radius, where radius is the radius of the circle we are calculating the area for.
 // Let's continue to break this down further into lines of code.
-// The students should see that pseudocoding helps to break down our problem into smaller steps, so that we can tackle it line by line. Finding the area of a circle may not seem very hard and thus the pseudocode may seem unnecessary, but the important part is that students should understand how it is used and be encouraged to use it during the in-class.
+// The students should see that pseudocoding helps to break down our problem into smaller steps, so that we can tackle it line by line.
+// Finding the area of a circle may not seem very hard and thus the pseudocode may seem unnecessary, but the important part is that students should understand how it is used and be encouraged to use it during the in-class.
 // MAY CHANGE LATER
 
 // we need to store the radius of the circle in a variable
@@ -67,18 +69,18 @@ var radius = 4;
 var pi = 3.14;
 // calculate the area of the circle
 var area = pi * radius * radius;
-// The point of pseudocode can be to make some comment so that people looking at your code can understand it easier, but also helps as a bridging tool between solving a problem in english and actually typing out the code needed for it.
+// The point of pseudocode can be to make some comment so that people looking at your code can understand it easier, but also helps as a bridging tool between solving a problem in English and actually typing out the code needed for it.
 
 
 // 2.2 Functions
 
-// So now we can do operations... which is great, but how do we operate like a machine, which takes in a user input, does some things with it, and gives us an output depending on what we put in? For that, we use functions.
+// So now we can do operations... which is great, but how do we structure our code in an orderly fashion? Functions allow us to break down or decompose a problem into smaller chunks - ideally we would want to write our functions such that individually they perform a particular task.
 
-// The students should understand: functions are simply multiple lines of operations that we have already learned, at the end - we return an output. There may or may not be an input given to this function, but some form of computational output should always be expected.
+// The students should understand: functions are simply multiple lines of operations that we have already learned. It may accept input in the form of values passed into the function, which are used as named in the parameters.It may also return an output, which we simply call a return value.
 
 // Walk through with students how this conversion works in a function
-// Students should also not change the name of the main function for now, just take it as that the main runs when we click submit.
-// show them how input is what we type in the html
+// Students should also not change the name of the main function for now, just take it as that the main runs when we click Submit.
+// Demonstrate feeding a value into the input box in the HTML page, clicking Submit, and then showing an output.
 // functions that take in an external input allows the functions to be used no matter what the input might be, as opposed to us having to manually type in the code.
 var main = function (input) {
   console.log('papaya');
