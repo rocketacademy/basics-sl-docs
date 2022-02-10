@@ -18,7 +18,7 @@ var area = pi * radius * radius;
 // The students can think of it as a box, the name of the variable is a label on the box that allows us to identify it easily, and the box stores data.
 
 // Remember to stress the importance of variable naming.
-// ASK A STUDENT: if they were to look at both statements below without any context beforehand, how would they feel as opposed to var area = pi * radius * radius? Now imagine if there were 500 lines of poorly named variables.
+// Q3: if they were to look at both statements below without any context beforehand, how would they feel as opposed to var area = pi * radius * radius? Now imagine if there were 500 lines of poorly named variables.
 var area = 3.14 * 4 * 4;
 var a = x * y * y;
 
@@ -37,7 +37,7 @@ var myName = "Kai";
 var company = "Rocket Academy";
 "Hi, my name is " + myName + " and I am the founder of " + company;
 
-// ASK A STUDENT: What happens if I add a string of "3" to a num 3? What will we get?
+// Q4: What happens if I add a string of "3" to a num 3? What will we get?
 var num = 3
 var result = "3" + num;
 // ANS: we get a concatenation(33) just like before, not 6. Show it in console. The result is a string as the integer is converted into a string and concatenated when added to another string.
@@ -49,7 +49,7 @@ var company = "Rocket Academy";
 
 // may change to es6 syntax?
 
-// Pseudo Code
+// 2.1 Pseudo Code
 // We can add two forward slashes at the start of a line to mark it as a comment, so our computer ignores it when executing code. Used so we can put plain english in our JS files! But we can also use pseudocode to help us with coding.
 // they can also highlight a bunch of lines and press CTRL(or CMD) + / to immediately mark them as comments.
 
@@ -70,9 +70,9 @@ var area = pi * radius * radius;
 // The point of pseudocode can be to make some comment so that people looking at your code can understand it easier, but also helps as a bridging tool between solving a problem in english and actually typing out the code needed for it.
 
 
-// Functions
+// 2.2 Functions
 
-// So now we can do operations... which is great, but how do we operate like a machine, which takes in a user input and gives us an output? For that, we use functions.
+// So now we can do operations... which is great, but how do we operate like a machine, which takes in a user input, does some things with it, and gives us an output depending on what we put in? For that, we use functions.
 
 // The students should understand: functions are simply multiple lines of operations that we have already learned, at the end - we return an output. There may or may not be an input given to this function, but some form of computational output should always be expected.
 
@@ -80,7 +80,6 @@ var area = pi * radius * radius;
 // Students should also not change the name of the main function for now, just take it as that the main runs when we click submit.
 // show them how input is what we type in the html
 // functions that take in an external input allows the functions to be used no matter what the input might be, as opposed to us having to manually type in the code.
-// ARE WE GOING THROUGH HTML ON DAY 1?
 var main = function (input) {
   console.log('papaya');
   // store input as distanceInKm
@@ -91,6 +90,13 @@ var main = function (input) {
   var myOutputValue = `Hi! ${input} kilometres is equal to ${distanceInMiles} miles.`;
   return myOutputValue;
 };
+
+// The input you give a function should affect the output of what they get. A real-life example is that you can think of the main function(and other functions that take in a parameter) as like a fruit juicer. The fruit juicer expects some fruit to go inside it, and the expected output is fruit juice. It will not work if you don't add a fruit inside. The kind of juice (the output) would depend on what fruit you put inside. Apple as an input would give us apple juice as an output while orange as an input would give us orange juice.
+
+var juicer = function (fruit) {
+  var juice = `${fruit} juice`;
+  return juice;
+}
 
 // Students can also change the input in the parenthesis to be something else, like distanceInKm so we can skip line 45, but they will have to change the subsequent lines as well.
 var main = function (distanceInKm) {
@@ -106,7 +112,7 @@ var add = function(a,b){
     console.log(`this is b: ${b}`)
     return a + b;
 };
-// ASK A STUDENT: What will the console logs be if we switch the positions of 1 and 2 in add(1,2)? What will the value of a and b be?
+// Q5: What will the console logs be if we switch the positions of 1 and 2 in add(1,2)? What will the value of a and b be?
 // show them how the position of the parameters matter. For result and result2, a and b are swapped because their positions match with the positions of a and b.
 var result = add(1,2);
 var result2 = add(2,1);
@@ -117,7 +123,7 @@ var blah = function () {
   return 1 + 2;
 }
 
-// ASK A STUDENT: What will we get as the answer below? Why?
+// Q6: What will we get as the answer below? Why?
 var main = function(input){
     var myOutputValue = add(1,add(2,3));
     return myOutputValue;
