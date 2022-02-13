@@ -96,4 +96,4 @@ Ask the student to work backwards from the symptom of the problem, even if it ma
 
 A: The student is stuck on some aspect of the problem, and doesn't know how to move forward. A common problem is that they understand the problem well enough but don't know how to translate the problem into code.
 
-First, get them to write detailed pseudo code for what they want to do. FOr a more experienced coder this is where we begin to understand the code structures and syntax we want to use. For a student we want to help them make these connections after they are done writing the pseudo code. (*I see you wrote, add to the list here, what would that translate to in code?*)
+First, get them to write detailed pseudo code for what they want to do. For a more experienced coder this is where we begin to understand the code structures and syntax we want to use. For a student we want to help them make these connections after they are done writing the pseudo code. (*I see you wrote, add to the list here, what would that translate to in code?*)

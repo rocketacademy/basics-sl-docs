@@ -1,7 +1,19 @@
 # Rocket Academy Basics: SL Guide
 Rocket Academy is committed to providing all of its students a great learning experience.
-
 Here we’ll outline some principles and guidelines to facilitate a great experience for every student.
+
+## Content
+[1. What is teaching? Why are we teaching?](#what-is-teaching-why-are-we-teaching)  
+[2. Why are the students here?](#why-are-the-students-here)  
+[3. How to guide someone.](#how-to-guide-someone)  
+[4. Things not to do](#things-not-to-do)  
+[5. Common Student Questions](#common-student-faq)  
+[6. Common issues](/commonIssues.md)  
+[7. Class Organisation](/classOrganisation.md)  
+[8. Lesson Prep Template](/lessonPrepTemplate.md)  
+[9. Zoom Setup Instructions](/zoomSetup.md)  
+
+
 ## What is teaching? Why are we teaching?
 The process of learning a new concept or skill happens 90% due to the work and motivation of each student. We as instructors are here to facilitate the experience of each student and guide them through the process of discovering for themselves the ideas and concepts implicit in the field of coding. We are here to provide the space and opportunity to practice the skill of coding.
 
