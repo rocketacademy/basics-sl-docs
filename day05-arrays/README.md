@@ -1,198 +1,69 @@
-# Day 6: Arrays, Loops 1
+# Day 5: Arrays
 
 ## Overview
 
-This day is split between two subjects that we will be synthesized in the next meeting.
+Arrays express the idea of a value made up of discrete composite values, in the way a week is composed of days, or a book of pages. This section introduces the array as a type of value. 
 
-Arrays express the idea of a value made up of discrete composite values, in the way a week is composed of days, or a book of pages. This section introduces the array as a type of value. It doesn't introduce the code needed to iterate over an arbitrary sized array yet.
+Using loops as our control flow, we will introduce the code needed to iterate over an arbitrary sized array. The integer location of the index and the counter in the loop match up perfectly to allow us to process every item in an array. This allows us to further expand the amount of data our programs can deal with.
 
-Loops are the last form of control flow to cover. It combines conditional syntax with the idea that the block repeats over and over. Note here how the JavaScript syntaxes are still building on each other.
+We want to plant the idea of the equivalence of the loop counter and the array index in students minds so that they have some time to wrap their head around the ideas. If students are struggling with the idea of their code manipulating data, this concept of a loop that adjusts dynamically for the size of the array is one of the more difficult concepts for them to use in their code.
 
-We also cover coding strategies. The reason we don't cover this right away is so that the students get a chance to build programs that have a reasonable level of complexity in them. This section should hopefully allow them to reflect on the code they've written so far and understand how they can improve their process. Feel free here to add any points you struggled with in particular.
+## 1.3 Arrays
 
-### Project
+### Overview
 
-[Beat That](../projects/project-2-beat-that.md)
+The `script.js` in the SL guide for this module has a series of examples that illustrate the benefits of using arrays over the previously taught data types.
 
-Remind the students to continue working on the Beat That project and submit a pull request before next Saturday's meeting.
+Do take the time to read through these examples, and share these with your students. Particularly for lists of similar data (days of a week, temperature per day etc.), arrays will be a better data structure.
 
-## Pre-Class Material
+While it is valid syntax to put any type of data in a given array, we do not recommend that. We prefer sticking to storing only 1 data type per array (eg. an array storing temperature per day should store numbers, not strings, Booleans or function definitions). This is because the concept of storing a list of data means that it should always be the same type.
 
-Total Video Watch Time: **\~41 mins**
+### Code Examples and Discussion Questions
 
-### [Coding Strategies](../course-logistics/tips-and-tricks/coding-strategies.md)
+**Question:** Given what we know above, how we can always access the last element of an array no matter what the size is?
 
-#### Discussion Questions
+**Answer:** `arrayName[arrayName.length - 1]`, you can use `daysOfTheWeek` as an example and show it in console.
 
-#### Q: What are the three ways to approach a problem? Describe which step you get stuck on the most so far.
+**Question:** How do we change the 'e' to a 'd' in the array below?
 
-A: 1) Understand the problem through language. 2) Strategize to prioritize problems. 3) Translate problem to JavaScript, use pseudocode.
+**Answer:** We can do so using `letters[3] = 'd'` or `letters[letters.length - 1] = 'd'`. The latter is preferred if you know that 'd' is the last item in the array, and the array is long (we do not want to manually count the number of items in an array to determine its index).
 
-#### Q: Describe one time that fixing an error updated your mental model / helped you understand your code and/or JavaScript better.
+**Question:** What happens if we try to access an index that doesn't exist?
 
-#### Q: What does deliberate practice mean to you? How are you implementing it in this course?
+**Answer:** `undefined`. Using the `letters` array example, you can demonstrate this on your Chrome Dev Tools console by accessing an index like `999`.
 
-### [9.1: Arrays](../9-arrays-and-iteration/9.1-arrays.md)
+**Question:** How does this dice guessing game work?
 
-#### Discussion Questions
+**Answer:** This game allows the user to make a series of guesses. They submit a guess (of a number) every time the Submit button is clicked. Storing guesses in an array allow its history to persist and be retrieved later, without the need for creating an indeterminate number of variables.
 
-#### Q: What is an array for?
+You can also use this example to demonstrate array methods like `.pop` and `.push`.
 
-A: Storing lists of data of the same kind or type.
+## 3.5 Looping Over An Array
 
-#### Q: Do arrays always have to store the same data type?
+### Overview
 
-A: It is valid syntax to put any kind of type into an array. But the concept of storing a list of data means that it should always be the same type.
+Starting here, we will be combining two key syntaxes, the array and the loop.
 
-```javascript
-var letters = ["a", "b", "c"];
-```
+We moved from functions, which can process a set amount of data based on parameters we write, to global variables, which are another. possibly larger set of values our programs can also deal with depending on the circumstances.
 
-#### Q: (Paste the above code into the console). How would we access 'b'?
+Combining arrays with loops allows another expansion of the volume of data the program can deal with, and we can write the code in such a way that deals with processing all or every item in an array.
 
-```javascript
-letters[9];
-```
+Students who had a difficult time understanding the action of loops repeating over a block may also have a difficult time implementing a loop that runs over an array.
 
-#### Q: After defining letters as the previous example, what happens when we try to access an element that doesn't exist?
+Again, there will be techniques you can demonstrate to students using some of the `script.js` examples, such as iterating over elements of an array using the array's length checked against the `counter` value.
 
-A: Trying to access an index that doesn't exist will give back the value `undefined`.
+### Code Examples and Discussion Questions
 
-```javascript
-// Store guesses in a global array that persists across Submits.
-var guesses = [];
-var main = function (input) {
-  // Add the user's guess to the guesses array.
-  guesses.push(input);
-  // Generate a random dice number.
-  var randomDiceNumber = rollDice();
-  // Initialise output to communicate loss.
-  // Output the record of all guesses regardless of loss or win.
-  var myOutputValue = "You lose. Your guesses: " + guesses;
-  // If the guess matches the dice roll, change output to communicate win.
-  if (randomDiceNumber == input) {
-    myOutputValue = "You win. Your guesses: " + guesses;
-  }
-  // Return output value.
-  return myOutputValue;
-};
-```
+**Question:** This is a sample code snippet of a phone book. Explain what this code does.
 
-#### Q: What does this code do?
+**Answer:** This phone book example adds the name (as input) to be stored in the array only if it doesn't already exist.
 
-(Note this code doesn't do a lot yet without a loop to get the data back out. Remind the students we'll be doing this next).
+As an SL, you can also restructure this demonstration by stripping away the `found` check from the sample code, and just having an arbitrary name list example. Then, work with the students to build the check for whether the name already exists (using `found` and `!found`) line by line.
 
-#### Q: `push` is the way we can put values in the array. How do we take them out?
+## Look Ahead / Wrap Up
 
-A: `pop`
+Students will begin working on Project 2: Beat That! by the end of the class.
 
-### [9.2: Loops](../9-arrays-and-iteration/9.2-loops.md)
+Given what we have known so far about the different data types, global values and control flow, we will begin building programs that can ask for different kinds of input. Next, we will be looking at techniques for verifying this input.
 
-```javascript
-// Initialise a counter to 0.
-var counter = 0;
-// Set the while loop condition to continue when counter is less than 10.
-while (counter < 10) {
-  // Log hello with each iteration of the loop.
-  console.log("hello " + counter);
-  // Increment the counter by 1 at the end of each loop iteration.
-  counter = counter + 1;
-}
-```
-
-#### Q: What does the above code do? (Have the student answer before pasting this code into the dev tools console).
-
-```javascript
-var main = function (input) {
-  var myOutputValue = "";
-  var counter = 0;
-  // Continue the loop while counter is less than the input value
-  while (counter < input) {
-    // Add 1 "yes" to the output for every loop iteration.
-    myOutputValue = myOutputValue + "yes";
-    counter = counter + 1;
-  }
-  return myOutputValue;
-};
-```
-
-#### Q: What does the above code do?
-
-#### Q: How can we have the above code example run the `console.log` 100 times?
-
-#### Q: (Starting from the original code) What if we set the starting value of `counter` to two instead of zero? What happens if the user types in a value above two?
-
-#### Q: (Starting from the original code) What if we increment the value of `counter` by three instead of one? On line 8: `counter = counter + 3;`
-
-```javascript
-var main = function (input) {
-  var myOutputValue = "";
-  var counter = 0;
-  // Continue the loop while counter is less than the input value
-  while (counter < input) {
-    // If counter is less than 5, add "yes" to output
-    if (counter < 5) {
-      myOutputValue = myOutputValue + "yes";
-      // Otherwise, add "no" to output
-    } else {
-      myOutputValue = myOutputValue + "no";
-    }
-    counter = counter + 1;
-  }
-  return myOutputValue;
-};
-```
-
-#### Q: What does the above code do?
-
-#### Q: What happens if the comparison is reversed? `if (counter > 5) {`
-
-```javascript
-var main = function (input) {
-  var myOutputValue = "";
-
-  var counter = 0;
-  while (counter < input) {
-    // If counter is even, add "yes" to output
-    // The modulus (%) operator returns the remainder after division
-    // If a number divided by 2 equals 0, we consider it even.
-    if (counter % 2 == 0) {
-      myOutputValue = myOutputValue + "yes";
-      // Otherwise, add "no" to output
-    } else {
-      myOutputValue = myOutputValue + "no";
-    }
-    counter = counter + 1;
-  }
-
-  return myOutputValue;
-};
-```
-
-#### Q: What does the above code do?
-
-#### Q: What is the result of: `4 % 2`? What about `5 % 2`?
-
-A:0,1.
-
-#### Q: How can we detect even numbers from the `% 2`?
-
-A: `x % 2 == 0` means it's divisible by 2 and therefore even.
-
-**Q: Can we call a function inside a loop? (refer to the example code)**
-
-A: Yes. All the control flow syntax is combinable. A loop can call a function. A function can have a loop inside. A conditional can be inside a loop.
-
-The most difficult part is deciding which to use!
-
-## In-Class Material
-
-[Day 6: Loops](../in-class-exercises/day-6-loops.md)
-
-## **Look Ahead / Wrap Up**
-
-Next we'll put the loop and array together. The integer location of the index and the counter in the loop match up perfectly to allow us to process _every_ item in an array. This allows us to further expand the amount of data our programs can deal with.
-
-_We want to plant the idea of the equivalence of the loop counter and the array index in students minds so that they have some time to wrap their head around the ideas. If students are struggling with the idea of their code manipulating data, this concept of a loop that adjusts dynamically for the size of the array is one of the more difficult concepts for them to use in their code._
-
-In the next meeting we'll also review the completed dice project.
+Additionally, we will be introducing HTML and CSS. Being able to structure and layout their pages, together with peppering their pages with user-friendly feedback, should allow students to embark on exploring customisations on their starter code templates for projects.
