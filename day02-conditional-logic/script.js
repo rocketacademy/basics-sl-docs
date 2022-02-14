@@ -143,42 +143,8 @@ var main = function (input) {
   return myOutputValue;
 };
 
-// ANS:
-var main = function (input) {
-  var randomDiceNumber1 = rollDice();
-  var randomDiceNumber2 = rollDice();
-  var randomDiceNumber3 = rollDice();
-  var myOutputValue = "you lose";
-  // change === to !==
-  if (randomDiceNumber1 !== input && randomDiceNumber2 !== input && randomDiceNumber3 !== input) {
-    myOutputValue = "you win";
-  }
-  return myOutputValue;
-};
-
-// Q12: How do we always get snake eyes here? There are two ways, one that modifies the main function and the other that modifies the rollDice function.
-
-// MAIN ANS: This works... but what if we still want to use our rollDice function and not touch our main?
-var main = function (input) {
-  var randomDiceNumber1 = 1;
-  var randomDiceNumber2 = 1;
-  // The default output value is "you lose".
-  var myOutputValue = "you lose";
-  // If the input matches both random dice numbers, output value is "you win".
-  if (
-    randomDiceNumber1 == input &&
-    randomDiceNumber2 == input &&
-    !(randomDiceNumber1 == 1 && randomDiceNumber2 == 1)
-  ) {
-    myOutputValue = "you win";
-  }
-  return myOutputValue;
-};
-
-// ROLLDICE ANS:
+// QUESTION: It can be tricky testing the `rollDice` function, given that it will generate a new random number of each execution. If I want to test the `rollDice` function constantly against the input of `"1"`, how will I change the `rollDice` code?
 var rollDice = function () {
-  return 1;
-  // Note how everything below is ignored after a return statement, now we just need to take out the above line and everything is back to normal with minimal effort!
   var randomDecimal = Math.random() * 6;
   var randomInteger = Math.floor(randomDecimal);
   var diceNumber = randomInteger + 1;
