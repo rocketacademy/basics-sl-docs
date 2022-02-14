@@ -54,3 +54,7 @@ var main = function (input) {
 
   return myOutputValue;
 };
+
+// QUESTION: For the same program, if `bluemode` is typed in (and Submit clicked), what gets displayed in the grey box? Which lines of code run?
+
+// QUESTION: For the same program, what happens if 'blue' is typed in and submitted?

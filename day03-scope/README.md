@@ -26,7 +26,7 @@ Be aware that astute students may notice global variables will get reset when th
 
 ### Code Examples and Discussion Questions
 
-**Question:** In the following function, it adds our input to `someNumber`. However, if we input `1` over and over again, we will keep getting `2` as the output. How do we change or move the code around such that the output increments everytime we input `1`? 
+**Question:** In the following function, it adds our input to `someNumber`. However, if we input `1` over and over again, we will keep getting `2` as the output. How do we change or move the code around such that the output increments everytime we input `1`?
 
 **Answer:** We can move the variable `someNumber` out of the function, into the global scope. This ensures that as long as the page is still running (not reloaded), we can input whatever number it will keep incrementing `someNumber`.
 
@@ -48,14 +48,14 @@ It can be visualised like this, by precedence: `papayaCount = (papayaCount + 1)`
 
 `myOutputValue` need not be shuffled or changed here. Instead, an `if` block can be set up before the default loss output to check if the `randomDiceNumber` does not match the `input`.
 
-It will be tempting to add the NOT condition next to the original one, but we will want the `bankRoll` decremented before we show the loss condition. Otherwise, the `bankRoll` in the loss condition `myOutputValue` will show the value before it decreased. 
+It will be tempting to add the NOT condition next to the original one, but we will want the `bankRoll` decremented before we show the loss condition. Otherwise, the `bankRoll` in the loss condition `myOutputValue` will show the value before it decreased.
 
 ```
 var bankRoll = 10;
 
 var main = function (input) {
   var randomDiceNumber = rollDice();
-  
+
   // decrement bankRoll if it doesn't match input
   if (randomDiceNumber != input) {
     bankRoll = bankRoll - 1;
@@ -77,7 +77,7 @@ var main = function (input) {
 
 ### Overview
 
-We will introduce a technique using globals together with conditionals to create "modes". Note this isn't a programming or computer science topic, but just a way to describe this use of globals and conditionals together. 
+We will introduce a technique using globals together with conditionals to create "modes". Note this isn't a programming or computer science topic, but just a way to describe this use of globals and conditionals together.
 
 Modes then allow the program to accept totally different data depending on the global game mode, i.e, the `input` variable can represent a string when the mode says `input` is the user's name, and it can represent a dice roll number when the mode says `input` represents a number. This is another expansion of the volume of data our programs can deal with.
 
@@ -95,7 +95,7 @@ Start with explaining the idea of "modes" - a way we can write code so that the 
 
 'The sea, once it casts its spell, holds one in its net of wonder forever. -Jacques Cousteau' appears in the grey box. The condition on line 6 is true. This sets the global mode variable. Then the condition on line 13 is true as well. Then the Jacques Cousteau quote appears.
 
-**Question:** What happens if 'blue' is typed in and submitted?
+**Question:** For the same program, what happens if 'blue' is typed in and submitted?
 
 **Answer:** Demonstrate this using the same game mode code in `script.js`.
 
