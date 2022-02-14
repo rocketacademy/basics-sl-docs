@@ -151,6 +151,8 @@ The formula for the trickier technique of simplification comes from: `!(subcond1
 
 **Answer:** Hardcode `rollDice` to return `1`. Ensure that the `return` statement is at the top of the `rollDice` function. Use this opportunity to demonstrate that `return` terminates the function, and the rest of the code after the `return` statement will be ignored by the script.
 
+This is a good strategy to approach debugging their applications and functions dealing with random numbers, especially when the students will be dealing with randomisation quite a lot in Basics.
+
 ```
 var rollDice = function () {
   return 1;
