@@ -1,80 +1,72 @@
-// Debugging and Control Flow
+// 2.3.2: FUNCTIONS II
+// We can have more than 1 parameter in a function.
+var add = function(a,b){
+    console.log(`this is a: ${a}`)
+    console.log(`this is b: ${b}`)
+    return a + b;
+};
+// We can also store the result (return value) of a function execution
+// in a variable.
+var result = add(1,2);
+// QUESTION: What will `console.log` results be for the following 2 lines?
+var result2 = add(1,2);
+var result3 = add(2,1);
 
-// 2.4 Debugging
+// Functions do not always require parameters or arguments
+// to have an output or return value.
+var blah = function () {
+  console.log ('papaya');
+  return 1 + 2;
+}
 
-// Compile-time syntax issues
-// show this in codesandbox, the students should note the red underlines.
-// Even before our code runs, the errors are detected.
+// QUESTION: What will `addMultiple` return? Why?
+var addMultiple = function(input){
+    var myOutputValue = add(1,add(2,3));
+    return myOutputValue;
+};
+
+// 2.4 ERRORS
+// QUESTION: What is the difference between a compile-time error and a run-time error?
+// Compile-time Error
 var kilometersToMiles = function distanceInKilometers) {
   var distanceInMiles = distanceInKilometers * 0.62;
   return distanceInMiles;
 };
-
 // Run-Time Syntax Errors
-// run this
 var myOutputValue = 'hello world'();
-//
 
-// 3.1 Intro to Control Flow
-
-// Right now, our code in our functions run line-by-line. That's fine, but what if we want to change the output drastically depending on the input given? How would our code recognise that only if given a certain input, a certain block of code runs?
-// We use conditional statements to introduce control flow. Now, we can make our code more flexible and decide how inputs dictate what runs.
-
-// 3.2 Conditionals
-
-// Q1: Why do we use '===' instead of '=' in our if statement?
-// ANS: We used '=' before to "assign the left hand side to what is on the right hand side", not as the mathematical equals we used in school. In Javascript, we need to use '===' to tell the computer that we wish to evaluate if the left hand side is equal to the right hand side.
-
-// Q2: What would the value of 1 + 2 === 3 be? What about 1 + 1 === 3?
-// ANS: We would get true and false respectively. Up till now, we were introduced to 2 data types - numbers and strings. Now, we have a third data type called 'Boolean'. There are only two boolean values - true or false. Booleans are essential to our next concept: Conditionals and control flow.
-
-
-// Q3: How would we get 'hello friend' to appear as our output?
+// 3.2 CONDITIONALS
+// QUESTION: How would we get `"hello friend"` to be printed?
 var main = function (input) {
   // Set a default value for myOutputValue
   var myOutputValue = "hello world";
   // If input is our secret phrase, change the value of myOutputValue
-  if (input === "palatable papaya") {
+  if (input == "palatable papaya") {
     myOutputValue = "hello friend";
   }
   // return myOutputValue as output
   return myOutputValue;
 };
 
-// Ignore the code below, apparently input validation is pushed all the way to Day 9? But I think the typecasting is at least something that should be mentioned since the students may face this issue - especially if we now use ES6 syntax.
+// QUESTION: What is the string printed by this function? Should I get `"you entered the number 3."` or `"you may or may not have entered the number 3."`?
+var main = function (input) {
+  // Set a default value for myOutputValue
+  var myOutputValue = "hello world";
 
-// // Q4: How would we change it such that if we input '3', we get hello friend?
-// var main = function (input) {
-//   // Set a default value for myOutputValue
-//   var myOutputValue = "hello world";
-//   // If input is our secret phrase, change the value of myOutputValue
-//   if (input === "3") {
-//     myOutputValue = "hello friend";
-//   }
-//   // return myOutputValue as output
-//   return myOutputValue;
-// };
+  if (input === 3) {
+    myOutputValue = "you entered the number 3.";
+  }
 
-// // Note that students may put 3 as opposed to "3". Show them that we still get the wrong input. The computer doesn't automatically recognise that 3 was meant to be a number rather than just a string.
+  if (input == 3) {
+    myOutputValue = "you may or may not have entered the number 3.";
+  }
 
-// // Q5: If we input a number here, we get a concatenation, as we have learnt yesterday that a string plus a number gives us a concatenation. How would we fix this such that mathematical operations work here? (We do not have to care about what happens when we input a string for now)
-// var main = function (input) {
-//   var myOutputValue = `${input} + 1 = ${input + 1}`;
-//   return myOutputValue;
-// };
-// // SAMPLE ANS:
-// var main = function (input) {
-//   var myOutputValue = `${input} + 1 = ${Number(input) + 1}`;
-//   return myOutputValue;
-// };
+  // return myOutputValue as output
+  return myOutputValue;
+};
 
-
-
-
-
-// We learnt last lesson that we can call functions within functions. Introduce the dice game to them.
-
-// Q6: How would we change this such that we get a 20 sided dice instead?
+// 3.1 INTRO TO LOGIC AND CONTROL FLOW (CONTINUED) 
+// QUESTION: How would we change this such that we get a 20 sided dice instead?
 var rollDice = function () {
   // Generate a decimal from 0 through 6, inclusive of 0 and exclusive of 6.
   var randomDecimal = Math.random() * 6;
@@ -91,71 +83,65 @@ var rollDice = function () {
 // ANS: Change the multiplication in randomDecimal to be * 20 instead.
 var randomDecimal = Math.random() * 20;
 
-// 3.3 Boolean Operators
+// 3.3 BOOLEAN OPERATORS
+// QUESTION: If I want to turn the random dice roll app into a dice game, I will change the the logic in the `main` function to incorporate winning conditions. What is the winning condition here?
+var rollDice = function () {
+  // Generate a decimal from 0 through 6, inclusive of 0 and exclusive of 6.
+  var randomDecimal = Math.random() * 6;
 
-// JUSTIN - We can stick to what is in the SL Guide for now, I don't have anything to add on atm. I just changed the equality operators to ES6 here just in case.
+  // Remove the decimal with the floor operation.
+  // This will be an integer from 0 to 5 inclusive.
+  var randomInteger = Math.floor(randomDecimal);
 
-// Q7: What would be the pseudocode for the following code?
-if (
-  randomDiceNumber + 1 === input ||
-  randomDiceNumber === input ||
-  randomDiceNumber - 1 === input
-) {
-  myOutputValue = "you win";
-}
-// SAMPLE ANS: If the input is either equal to or one off from the random dice number, the user wins.
+  // Add 1 to get valid dice rolls of 1 through 6 inclusive.
+  var diceNumber = randomInteger + 1;
 
-// Q8: If I rearranged the order of the checks within my parenthesis, would anything change?
-// ANS: No. The order does not matter. Any of the statements can be true in order for the condition block to run.
-
+  return diceNumber;
+};
 var main = function (input) {
   // Generate a random dice number
   var randomDiceNumber = rollDice();
 
-  // Default output value is 'you lose'.
-  var myOutputValue = "you lose";
+  var myOutputValue = 'You just rolled a ' + randomDiceNumber + ', and your guess is ' + input + '. You lost!';
 
-  // If input matches randomDiceNumber, update output.
-  var didUserWin = input === randomDiceNumber;
-
-  console.log("boolean operation result: " + didUserWin);
-
-  if (didUserWin) {
-    myOutputValue = "you win";
+  if (
+    randomDiceNumber + 1 == input ||
+    randomDiceNumber == input ||
+    randomDiceNumber - 1 == input
+  ) {
+    myOutputValue = 'You just rolled a ' + randomDiceNumber + ', and your guess is ' + input + '. You win!';
   }
 
-  // Return output.
+  // Return and print output.
   return myOutputValue;
 };
-// Q9: What is the difference between the above code and the original dice game example?
 
-// Q10: How would I add a third dice to the below function?
+// QUESTION: The following program allows the user to win only if the input matches both random dice numbers. How would I add a third dice to the below function and ensure that the user wins if the input matches all 3 dice numbers?
 var main = function (input) {
   var randomDiceNumber1 = rollDice();
   var randomDiceNumber2 = rollDice();
   // The default output value is "you lose".
   var myOutputValue = "you lose";
   // If the input matches both random dice numbers, output value is "you win".
-  if (randomDiceNumber1 === input && randomDiceNumber2 === input) {
+  if (randomDiceNumber1 == input && randomDiceNumber2 == input) {
     myOutputValue = "you win";
   }
   return myOutputValue;
 };
-// ANS
+
+// QUESTION: How will I flip the conditions of the code before (or below), such that the user wins if the input does not match the 3 dice numbers?
 var main = function (input) {
   var randomDiceNumber1 = rollDice();
   var randomDiceNumber2 = rollDice();
   var randomDiceNumber3 = rollDice();
   // The default output value is "you lose".
   var myOutputValue = "you lose";
-  // If the input matches all 3 dice numbers, output value is "you win".
-  if (randomDiceNumber1 === input && randomDiceNumber2 === input && randomDiceNumber3 === input) {
+  // If the input matches all 3 random dice numbers, output value is "you win".
+  if (randomDiceNumber1 == input && randomDiceNumber2 == input && randomDiceNumber3 == input) {
     myOutputValue = "you win";
   }
   return myOutputValue;
 };
-
-// Q11: Given the code above, how would I make it so that I win if I didn't guess correctly?
 
 // ANS:
 var main = function (input) {

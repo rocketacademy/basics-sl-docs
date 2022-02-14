@@ -84,30 +84,3 @@ var main = function (distanceInKm) {
   var myOutputValue = `Hi! ${distanceInKm} kilometres is equal to ${distanceInMiles} miles.`;
   return myOutputValue;
 };
-
-// To remove all below after moving them to Day 2
-// We can have more than 1 parameter in a function.
-var add = function(a,b){
-    console.log(`this is a: ${a}`)
-    console.log(`this is b: ${b}`)
-    return a + b;
-};
-// We can also store the result (return value) of a function execution
-// in a variable.
-var result = add(1,2);
-// QUESTION: What will `console.log` results be for the following 2 lines?
-var result2 = add(1,2);
-var result3 = add(2,1);
-
-// Functions do not always require parameters or arguments
-// to have an output or return value.
-var blah = function () {
-  console.log ('papaya');
-  return 1 + 2;
-}
-
-// QUESTION: What will `addMultiple` return? Why?
-var addMultiple = function(input){
-    var myOutputValue = add(1,add(2,3));
-    return myOutputValue;
-};

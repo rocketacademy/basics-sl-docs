@@ -107,18 +107,6 @@ You can begin demonstrating the code examples in `script.js` by copying them ove
 
 **Answer:** This `main` function, when executed, will first log the string `"papaya"` into the browser console. It then converts a distance in kilometres (from the `input`) into miles.
 
-**Question:** What will `console.log` results be for the following 2 lines?
-
-**Answer:** For the function call in `result2`, `a` will be `1` and `b` will be `2`. For the function call in `result3`, `a` will be `2` and `b` will be `1`.
-
-The order of the function arguments will match the order of the function parameters. `a` and `b` will be swapped in the function calls for `result2` and `result3` because the arguments are flipped.
-
-**Question:** What will `addMultiple` return? Why?
-
-**Answer:** The answer is `6`. In `var myOutputValue = add(1,add(2,3));`, `add(2,3)` gets executed first, giving us `5`. Subsequently, `add(1,add(2,3))` is mathematically equivalent to `add(1,5)`. This will be executed after `add(2,3)`, and `add(1,5)` gives us `6`.
-
-This is a demonstration that we can put the result (return value) of executing a function in the argument.
-
 ### FAQ
 
 Some common misconceptions around functions:

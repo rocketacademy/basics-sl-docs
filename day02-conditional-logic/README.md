@@ -1,210 +1,174 @@
-# Day 3: Logic 1
+# Day 2: Conditional Logic
 
 ## **Overview**
 
-Logic is the first day that we introduce real serious control flow. Some students will struggle to cope with this increase in complexity, not because the code is hard to understand but because understanding what code to write is much more difficult.
+Day 2 carries on from Day 1 by reiterating on functions, thereafter introducing error handling, conditional (`if`, `else if`, `else`) control flow and Boolean values.
 
-Remember that just logic in and of itself is actually a huge topic. This first day tries to leave out some of the complexities by leaving off certain syntax such as `else` and `else if`. It may be awkward to think about coding without these tools, but it may help the students to tackle the problems with less options and less possible code paths to deal with.
+## 2.3.2 Functions II
 
-## Pre-Class Material
+### Overview
 
-Total Video Watch Time: **\~40 mins**
+We are beginning to see functions with multiple parameters and arguments, as well as how we can pass their `return` values to the calling scope to use or store as a variable.
 
-### [6.1: Intro to Logic](../6-conditional-logic/6.1-intro-to-logic.md)
+There are a couple of things that may need to be emphasized to students:
 
-#### Overview
+* function parameters are assigned and ordered based on position in the input parameter list.
+* thereafter, the function arguments when executing said functions should follow the same order.
 
-Introduces one basic conditional if statement with one equivalence operator inside.
+It is best to set up a simple demonstration yourself to show students how function parameters and arguments are matched when (a) defining the function, and (b) executing it.
 
-We don't introduce things like what else can go in the conditional parens or things like else yet.
+### Code Examples and Discussion Questions
 
-The code should be relatively intuitive here.
+**Question:** What will `console.log` results be for the following 2 lines?
+
+**Answer:** For the function call in `result2`, `a` will be `1` and `b` will be `2`. For the function call in `result3`, `a` will be `2` and `b` will be `1`.
+
+The order of the function arguments will match the order of the function parameters. `a` and `b` will be swapped in the function calls for `result2` and `result3` because the arguments are flipped.
+
+**Question:** What will `addMultiple` return? Why?
+
+**Answer:** The answer is `6`. In `var myOutputValue = add(1,add(2,3));`, `add(2,3)` gets executed first, giving us `5`. Subsequently, `add(1,add(2,3))` is mathematically equivalent to `add(1,5)`. This will be executed after `add(2,3)`, and `add(1,5)` gives us `6`.
+
+This is a demonstration that we can put the result (return value) of executing a function in the argument.
+
+## 2.4 Errors
+
+### Overview
+
+A common misconception with coding is that all the time spent learning to code or doing coding is spent actually typing out the code. It is important to emphasize to students that the learning process is 80% about identifying and fixing errors. (And also that the professional coding process is also 80% fixing errors).
+
+In this sense the idea of errors and the strategies for approaching them are as important or more important than any other subject covered in Basics.
+
+Do reinforce and continue to reinforce the idea that the students should always immediately open the Chrome Dev tools whenever they open the browser. If you aren't already doing this, always pattern this behavior for students.
+
+### Code Examples and Discussion Questions
+
+**Question:** What is the difference between a compile-time error and a run-time error?
+
+**Answer:** One happens when the page loads, the other happens when the code is run- that is, a function's code isn't necessarily run right away, for example the code inside the main function.
+
+Have the 2 different errors in your `script.js` prepared on your CodeSandbox starter code. For the compile-time syntax error, you should be able to notice the red underlines in CodeSandbox.
+
+For the run-time error, the error will not be detected (on the editor's end) until the code is running.
+
+## 3.1 Intro to Logic and Control Flow 
+
+### Overview
+
+The Logic module is where we introduce real serious control flow. Some students will struggle to cope with this increase in complexity, not because the code is hard to understand but because understanding what code to write is much more difficult.
+
+To properly demonstrate the idea of a "control flow", you may want to start with running through the 3.1.1 Control Flow Diagrams module again. The diagrams help demonstrate how real-life scenarios can be analogous to this aspect of logical thinking.
+
+Remember that just logic in and of itself is actually a huge topic. It may be useful to go slowly and sequentially, starting with `if`s, then `else`s, and then `else if`s. It is worth thinking of these as items in a chain. You can't have your `else`s and `else if`s without the original `if`.
+
+Start with this brief overview, cover conditionals and Boolean logic. We will finish this section much later by demonstrating a dice game example.
+
+## 3.2 Conditionals 
+
+### Overview
+
+Using your starter code on CodeSandbox, introduce one basic conditional `if` statement with one equivalence operator inside. The code should be relatively intuitive here.
 
 Students can sometimes get confused that block curly braces for functions work differently from conditional block curly braces (e.g. function scope).
 
-#### Discussion Questions
+### Code Examples and Discussion Questions
 
-```javascript
-var main = function (input) {
-  // Set a default value for myOutputValue
-  var myOutputValue = "hello world";
-  // If input is our secret phrase, change the value of myOutputValue
-  if (input == "palatable papaya") {
-    myOutputValue = "hello friend";
-  }
-  // return myOutputValue as output
-  return myOutputValue;
-};
+**Question:** What is the difference between `==` and `=`?
+
+**Answer:** There isn't a `script.js` example for this, so you can just talk about this with students conceptually.
+
+Look back at the explanation for the `=` operator back in the SL guide for Day 1 Module 1.2 Variables. The key difference is the `==` is for equivalence, while `=` is for assignment. Feel free to reuse the analogy from Day 1 Module 1.2 Variables about boxes to re-iterate assignment.
+
+Emphasize to students to double-check that they are using `==` or `===` for equivalence, otherwise their conditional logic may not work the way they intended.
+
+**Question:** How would we get `"hello friend"` to be printed?
+
+**Answer:** Demonstrate the code on CodeSandbox. 
+
+This is a test of your students' code reading abilities, especially with new conditional syntax being taught. The question can also be re-phrased as "What should I type into the input field to get `"hello friend"` to print.
+
+The answer is simply `"palatable papaya"`.
+
+**Question:** What would the value of `1 + 2 === 3` be? What about `1 + 1 === 3`?
+
+**Answer:** You can demonstrate this using `console.log` in your CodeSandbox starter code, or your Chrome Dev Tools console.
+
+We would get `true` and `false` respectively. Up till now, we were introduced to 2 data types - numbers and strings. Now, we have a third data type called 'Boolean'. There are only two Boolean values - true or false. Booleans are essential to our next concept: Conditionals and control flow.
+
+**Question:** What is the string printed by this function? Should I get `"you entered the number 3."` or `"you may or may not have entered the number 3."`?
+
+**Answer:** This is a tricky question, but it puts together what the students know about strict vs. non-strict equivalence, as well as familiarity with the starter code interface.
+
+Demonstrate the code on CodeSandbox. `myOutputValue` will be `"you may or may not have entered the number 3."` at the end. 
+
+This is because the string `"you entered the number 3."` is only assigned when `input` is strictly the number `3`. 
+
+Inputs coming from the input field will always be a string, unless parsed otherwise. It is worth using this opportunity to explain this situation regarding the Starter Code input field to students. 
+
+The way to cast this string into a number will be covered later in the course, but it shouldn't hurt to demonstrate the `Number(input)` syntax.
+
+## 3.1 Intro to Logic and Control Flow (continued)
+
+### Overview
+
+Putting everything from functions, conditionals and control flow together, we will demonstrate the pre-class dice roll program logic again.
+
+### Code Examples and Discussion Questions
+
+**Question:** How would we change this `rollDice` function logic such that we get a 20 sided dice instead?
+
+**Answer:** Multiply `Math.random()` by 20 for the assignment of `randomDecimal`.
+
+## 3.3 Boolean Operators
+
+### Overview
+
+We can continue with the dice roll program example, and add to the examples to demonstrate the use of Boolean operators. 
+
+Start by introducing the logical OR operator. Again, here with a single boolean operator there is a lot of inherent complexity, but we leave off a lot so that the code feels relatively intuitive.
+
+### Code Examples and Discussion Questions
+
+**Question:** If I want to turn the random dice roll app into a dice game, I will change the the logic in the `main` function to incorporate winning conditions. What is the winning condition here?
+
+**Answer:** This question and code drastically changes the application as listed on the pre-class follow along exercises. Give your students some time to read and understand the code.
+
+If the input is either equal to or one off from the random dice number, the user wins.
+
+**Question**: The following program allows the user to win only if the input matches both random dice numbers. How would I add a third dice to the below function and ensure that the user wins if the input matches all 3 dice numbers?
+
+**Answer**: Create a variable `randomDiceNumber3`, and it will store the value of its own execution of `rollDice`. Then ensure that `randomDiceNumber3` is checked against the user's input.
+
+**Question**: How will I flip the conditions of the code before (or below), such that the user wins if the input does not match the 3 dice numbers?
+
+**Answer**: The simplest way to flip the conditions is to wrap the original one in a parenthesis, then adding a NOT operator, like so `!(randomDiceNumber1 == input && randomDiceNumber2 == input && randomDiceNumber3 == input)`.
+
+The trickier way to do this is to simplify the formula above into: `randomDiceNumber1 != input || randomDiceNumber2 != input || randomDiceNumber3 != input`. This is a fairly advanced logical technique, and we do not propose demonstrating this unless you are confident of pulling this off. 
+
+The formula for the trickier technique of simplification comes from: `!(subcond1 || subcond2 || subcond3) === (!subcond1 && !subcond2 && !subcond3)` or `!(subcond1 && subcond2 && subcond3) === (!subcond1 || !subcond2 || !subcond3)`. The sub-conditions are flipped, as well as the Boolean operators (OR becomes AND, and vice versa).
+
+**Question**: It can be tricky testing the `rollDice` function, given that it will generate a new random number of each execution. If I want to test the `rollDice` function constantly against the input of `"1"`, how will I change the `rollDice` code?
+
+**Answer:** Hardcode `rollDice` to return `1`. Ensure that the `return` statement is at the top of the `rollDice` function. Use this opportunity to demonstrate that `return` terminates the function, and the rest of the code after the `return` statement will be ignored by the script.
+
 ```
-
-**Q: Make a change so that I see** _**hello friend**_ **when I type the number 333.**
-
-```javascript
 var rollDice = function () {
-  // Generate a decimal from 0 through 6, inclusive of 0 and exclusive of 6.
+  return 1;
+  // Note how everything below is ignored after a return statement
   var randomDecimal = Math.random() * 6;
-
-  // Remove the decimal with the floor operation.
-  // This will be an integer from 0 to 5 inclusive.
   var randomInteger = Math.floor(randomDecimal);
-
-  // Add 1 to get valid dice rolls of 1 through 6 inclusive.
   var diceNumber = randomInteger + 1;
 
   return diceNumber;
 };
 ```
 
-**Q: Make sure students what the code does. No need to go into the details of Math.floor, etc. The most important thing to know is that the random number is from 1-6.**
-
-**Q: How to make the number larger?**
-
-A: Change multiplication on line 3.
-
-```javascript
-var main = function (input) {
-  // Generate a random dice number
-  var randomDiceNumber = rollDice();
-
-  // Default output value is 'you lose'.
-  var myOutputValue = "you lose";
-
-  // If input matches randomDiceNumber, update output.
-  if (input == randomDiceNumber) {
-    myOutputValue = "you win";
-  }
-
-  // Return output.
-  return myOutputValue;
-};
-```
-
-#### Q: Make a change so that I win, unless I guessed the random number.
-
-### [6.2: Pseudo Code, Boolean Or](../6-conditional-logic/6.2-pseudo-code-boolean-or.md)
-
-#### Overview
-
-Introduces the logical OR operator. Again, here with a single boolean operator there is a lot of inherent complexity, but we leave off a lot so that the code feels relatively intuitive.
-
-This section also introduces _**pseudocode**_ as a way to bridge logical english sentences into running JavaScript code.
-
-#### Discussion Questions
-
-```javascript
-if (
-  randomDiceNumber + 1 == input ||
-  randomDiceNumber == input ||
-  randomDiceNumber - 1 == input
-) {
-  myOutputValue = "you win";
-}
-```
-
-**Q: Add the pseudocode comments to this code example.**
-
-**Q: Does it matter what order the individual equivalence checks are in? Can we check for `number - 1 == input` first?**
-
-A: With logical OR it does not matter. In english, \*any\* of the statements can be true in order for the condition block to run.
-
-### [6.3: Boolean And and Not](../6-conditional-logic/6.3-boolean-and-not.md)
-
-#### Overview
-
-This section covers three important topics: Boolean AND, boolean NOT, error testing conditionals with `console.log`.
-
-#### Discussion Questions
-
-#### Boolean Values
-
-```javascript
-var main = function (input) {
-  // Generate a random dice number
-  var randomDiceNumber = rollDice();
-
-  // Default output value is 'you lose'.
-  var myOutputValue = "you lose";
-
-  // If input matches randomDiceNumber, update output.
-  var didUserWin = input == randomDiceNumber;
-
-  console.log("boolean operation result: " + didUserWin);
-
-  if (didUserWin) {
-    myOutputValue = "you win";
-  }
-
-  // Return output.
-  return myOutputValue;
-};
-```
-
-#### Q: What is the difference between the above code and the original dice game example?
-
-A: They both work the same. In this example I can see what is going to happen in the if because I am capturing and `console.log`ing the result of the boolean operation.
-
-#### AND
-
-```javascript
-var main = function (input) {
-  var randomDiceNumber1 = rollDice();
-  var randomDiceNumber2 = rollDice();
-  // The default output value is "you lose".
-  var myOutputValue = "you lose";
-  // If the input matches both random dice numbers, output value is "you win".
-  if (randomDiceNumber1 == input && randomDiceNumber2 == input) {
-    myOutputValue = "you win";
-  }
-  return myOutputValue;
-};
-```
-
-#### Q: How would I add a third dice?
-
-#### NOT
-
-#### Q: Given the code above, how would I make it so that I win if I didn't guess correctly?
-
-A: Change the equality `==` operator to not equal `!=`.
-
-#### Snake Eyes
-
-```javascript
-var main = function (input) {
-  var randomDiceNumber1 = rollDice();
-  var randomDiceNumber2 = rollDice();
-  // The default output value is "you lose".
-  var myOutputValue = "you lose";
-  // If the input matches both random dice numbers, output value is "you win".
-  if (
-    randomDiceNumber1 == input &&
-    randomDiceNumber2 == input &&
-    !(randomDiceNumber1 == 1 && randomDiceNumber2 == 1)
-  ) {
-    myOutputValue = "you win";
-  }
-  return myOutputValue;
-};
-```
-
-#### Q: How can I test to make sure that getting snake eyes causes me to lose?
-
-A: Hard code `rollDice` to return 1.
-
-#### Q: Make a change to the code so I only win when I get snake eyes.
-
-## In-Class Material
-
-[Day 3: If Statements, Boolean Or, And](../in-class-exercises/day-3-if-statements-boolean-or.md)
-
 ## Look Ahead / Wrap-up
 
-Just the conditionals syntax in this day is a huge amount of possible complexity and the possibility space the code can explore is now exponentially larger compared to the previous day. The code can now decide things based on data. We'll continue to use conditionals to expand what our programs can do. Next is to introduce global values so that the program can evolve over time and can deal with more and more data as the user uses the program. Next time we'll also introduce the GItHub project submission workflow.
+Just the conditionals syntax in this day is a huge amount of possible complexity and the possibility space the code can explore is now exponentially larger compared to the previous day. The code can now decide things based on data. We'll continue to use conditionals to expand what our programs can do. Next is to introduce global values so that the program can evolve over time and can deal with more and more data as the user uses the program.
 
 ## Post-Class: Begin Project
 
-Introduce the project. SPS is split into two parts. The second part will use global variables to keep track of game state.
+Introduce the project. Scissors Paper Stone is split into two parts. The second part will use global variables to keep track of game state.
 
 Make sure everyone understands when the project is due.
-
-[Project 1: Scissors Paper Stone (Part 1)](../projects/project-1-scissors-paper-stone/project-1-scissors-paper-stone-part-1.md)
