@@ -40,7 +40,17 @@ It will be useful to point out that this process can be tedious for arrays, and 
 
 Sets in the form of JavaScript objects will be more applicable for storing a set (deck) of cards, because we can easily store multiple data types with different key-value pairs - strings for suits, numbers for ranks.
 
-As SLs, we can then demonstrate the way to set up a preliminary set or hand of cards (using an array of objects):
+As SLs, we can then demonstrate the way to set up a deck, starting with just 1 card:
+
+```
+var card = {
+  rank: 9,
+  suit: 'hearts',
+  name: 'nine'
+};
+```
+
+When we begin to store a list of sets, like a preliminary deck or hand of cards, we can combine what we know about arrays and objects. We will set up an array of objects:
 
 ```
 var cardDeck = [
