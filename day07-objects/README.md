@@ -1,416 +1,231 @@
-# Day 8: Objects
+# Day 7: Objects
 
 ## Overview
 
-With objects we get to abstract and create our own definitions of what one value / variable / piece of data can be. In the case of our card example, we can choose to have integers \*and\* strings make up the definition of one card. We're creating an abstraction of what a card is, and also including data in our card that we'll need to calculate and display things. The exercise of defining object keys and data types is fundamentally an exercise in abstraction and encapsulation.
+In general, objects represent any tabular data - rows in a spreadsheet, names in an address book - most data in the real world that computer programs deal with has this tabular structure.
 
-It's also true that an object represents any tabular data- rows in a spreadsheet, names in an address book- most data in the real world that computer programs deal with has this tabular structure.
+## 1.4 Objects
 
-Students will sometimes be confused about the idea of "holding" different types of data in a single variable value, that is, they won't be sure when to use an array or object. Refer back to the table in 10.1 to decide this.
+### Overview
+
+With objects we get to abstract and create our own definitions of what one value / variable / piece of data can be. In the case of our card example, we can choose to have integers **and** strings make up the definition of one card. We're creating an abstraction of what a card is, and also including data in our card that we'll need to calculate and display things. The exercise of defining object keys and data types is fundamentally an exercise in abstraction and encapsulation.
+
+Students will sometimes be confused about the idea of "holding" different types of data in a single variable value, that is, they won't be sure when to use an array or object. Considering that the previous data structure taught was arrays, it will be fair to start the class doing a comparison of both data structures.
 
 Sometimes assignment into a given key can look confusing: `card.rank = newRank;` or assigning a new key: `card.newKey = 99;` It may not be totally clear to students that square brackets in objects are different from square brackets for arrays.
 
-## Project Due
+### Code Examples and Discussion Questions
 
-[Project 2: Beat That!](../projects/project-2-beat-that.md)
+**Question 1:** Demonstrate this using the Chrome Dev Tools console. What is problematic with this approach of using 2 named arrays to store names and numbers in a phonebook?
 
-## Pre-Class Material
+**Answer 1:** This is where we can start the class beginning to compare arrays and objects for storing sets of data. The problems are as follows:
 
-Total Video Watch Time: **\~15 mins**
+* The indices and information for both arrays have to be aligned to retrieve an accurate set of data. To get a set of information, we have to get the data from 2 identical indices from 2 different arrays.
+* Since alignment is important, there is less room for human error for adding and removing from the arrays. We have to add to both arrays and remove from both so that the data is consistent.
+* What if we only want to remove a name but keep the number, or vice versa? It will be simpler using objects to continue keeping a set of data with 1 array (ie. an array of objects), while removing just a key-value pair in said set of data.
 
-### [10.1: JavaScript Objects](../10-javascript-objects/10.1-javascript-objects.md)
+**Question 2:** Demonstrate this using the Chrome Dev Tools console. In the line below, what will be the pseudocode for getting the numerical sum of the ranks?
 
-```javascript
-var cardDeck = ["nine of hearts", "ten of hearts", "jack of hearts"];
-```
-
-#### Q: For the code example above, what would be the pseudocode for getting the total of the ranks?
-
-A:
+**Answer 2:** The actual code example may require string splitting, which the students may not be fully comfortable with. It is okay to stick to asking for a layman pseudocode logic for how they will achieve this.
 
 ```
 // loop over the array
-    // break apart the string to get the first word
-    // evaluate the first word
-    // is it "one" add the number 1
-    // is it "two" add the number 2
-    // etc., until "king"
+  // break apart the string to get the first word
+  // evaluate the first word of string (eg. 'nine')
+  // if it's "ace" add the number 1, 
+  // if it's "two" add the number 2 etc, until 13 for 'king'
 ```
 
-#### Q: What other card-like values could we use to represent the card deck? Are there issues with these other implementations?
+It will be useful to point out that this process can be tedious for arrays, and the alternative (if sticking to arrays) is to use numbers. However, when storing numbers (eg. `var cardDeck = [9, 10, 11];`), we start to lose context of the suits for each card.
 
-A: Array of numbers: `var cardDeck = [9,10,10];` With this array we wouldn't know what the suit or name of the card is.
+Sets in the form of JavaScript objects will be more applicable for storing a set (deck) of cards, because we can easily store multiple data types with different key-value pairs - strings for suits, numbers for ranks.
 
-#### Q: Why does an object solve these issues of representing a "card"?
+As SLs, we can then demonstrate the way to set up a preliminary set or hand of cards (using an array of objects):
 
-A: We can keep each individual value that makes up the idea of a card separate, but together in one card value.
-
-```javascript
+```
 var cardDeck = [
   {
-    rank: 1,
-    suit: "heart",
-    name: "one",
-  },
-  {
-    rank: 2,
-    suit: "heart",
-    name: "two",
-  },
-];
-```
-
-#### Q: (Run the above code to create the array). How can the name of the second card be accessed?
-
-A: `cardDeck[1].name`
-
-#### Q: How can the suit of the first card be changed to diamonds?
-
-A: `cardDeck[0].suit = 'diamonds';`
-
-#### Q: How can we add a '`temperature`' key that equals `99` to the first card? (this is just an example of adding a new random key).
-
-A: `cardDeck[0].temperature = 99;`
-
-```javascript
-// Initialise the card deck representation as an array of objects
-var deck = [
-  {
-    name: "ace",
-    suit: "hearts",
-    rank: 1,
-  },
-  {
-    name: "2",
-    suit: "hearts",
-    rank: 2,
-  },
-  {
-    name: "3",
-    suit: "hearts",
-    rank: 3,
-  },
-  {
-    name: "4",
-    suit: "hearts",
-    rank: 4,
-  },
-  {
-    name: "5",
-    suit: "hearts",
-    rank: 5,
-  },
-  {
-    name: "6",
-    suit: "hearts",
-    rank: 6,
-  },
-  {
-    name: "7",
-    suit: "hearts",
-    rank: 7,
-  },
-  {
-    name: "8",
-    suit: "hearts",
-    rank: 8,
-  },
-  {
-    name: "9",
-    suit: "hearts",
     rank: 9,
+    suit: 'hearts',
+    name: 'nine'
   },
   {
-    name: "10",
-    suit: "hearts",
     rank: 10,
+    suit: 'hearts',
+    name: 'ten'
   },
   {
-    name: "jack",
-    suit: "hearts",
     rank: 11,
-  },
-  {
-    name: "queen",
-    suit: "hearts",
-    rank: 12,
-  },
-  {
-    name: "king",
-    suit: "hearts",
-    rank: 13,
-  },
-  {
-    name: "ace",
-    suit: "diamonds",
-    rank: 1,
-  },
-  {
-    name: "2",
-    suit: "diamonds",
-    rank: 2,
-  },
-  {
-    name: "3",
-    suit: "diamonds",
-    rank: 3,
-  },
-  {
-    name: "4",
-    suit: "diamonds",
-    rank: 4,
-  },
-  {
-    name: "5",
-    suit: "diamonds",
-    rank: 5,
-  },
-  {
-    name: "6",
-    suit: "diamonds",
-    rank: 6,
-  },
-  {
-    name: "7",
-    suit: "diamonds",
-    rank: 7,
-  },
-  {
-    name: "8",
-    suit: "diamonds",
-    rank: 8,
-  },
-  {
-    name: "9",
-    suit: "diamonds",
-    rank: 9,
-  },
-  {
-    name: "10",
-    suit: "diamonds",
-    rank: 10,
-  },
-  {
-    name: "jack",
-    suit: "diamonds",
-    rank: 11,
-  },
-  {
-    name: "queen",
-    suit: "diamonds",
-    rank: 12,
-  },
-  {
-    name: "king",
-    suit: "diamonds",
-    rank: 13,
-  },
-  {
-    name: "ace",
-    suit: "clubs",
-    rank: 1,
-  },
-  {
-    name: "2",
-    suit: "clubs",
-    rank: 2,
-  },
-  {
-    name: "3",
-    suit: "clubs",
-    rank: 3,
-  },
-  {
-    name: "4",
-    suit: "clubs",
-    rank: 4,
-  },
-  {
-    name: "5",
-    suit: "clubs",
-    rank: 5,
-  },
-  {
-    name: "6",
-    suit: "clubs",
-    rank: 6,
-  },
-  {
-    name: "7",
-    suit: "clubs",
-    rank: 7,
-  },
-  {
-    name: "8",
-    suit: "clubs",
-    rank: 8,
-  },
-  {
-    name: "9",
-    suit: "clubs",
-    rank: 9,
-  },
-  {
-    name: "10",
-    suit: "clubs",
-    rank: 10,
-  },
-  {
-    name: "jack",
-    suit: "clubs",
-    rank: 11,
-  },
-  {
-    name: "queen",
-    suit: "clubs",
-    rank: 12,
-  },
-  {
-    name: "king",
-    suit: "clubs",
-    rank: 13,
-  },
-  {
-    name: "ace",
-    suit: "spades",
-    rank: 1,
-  },
-  {
-    name: "2",
-    suit: "spades",
-    rank: 2,
-  },
-  {
-    name: "3",
-    suit: "spades",
-    rank: 3,
-  },
-  {
-    name: "4",
-    suit: "spades",
-    rank: 4,
-  },
-  {
-    name: "5",
-    suit: "spades",
-    rank: 5,
-  },
-  {
-    name: "6",
-    suit: "spades",
-    rank: 6,
-  },
-  {
-    name: "7",
-    suit: "spades",
-    rank: 7,
-  },
-  {
-    name: "8",
-    suit: "spades",
-    rank: 8,
-  },
-  {
-    name: "9",
-    suit: "spades",
-    rank: 9,
-  },
-  {
-    name: "10",
-    suit: "spades",
-    rank: 10,
-  },
-  {
-    name: "jack",
-    suit: "spades",
-    rank: 11,
-  },
-  {
-    name: "queen",
-    suit: "spades",
-    rank: 12,
-  },
-  {
-    name: "king",
-    suit: "spades",
-    rank: 13,
-  },
-];
-
-// Shuffle the deck and save it in a new variable shuffledDeck
-// to communicate that we have shuffled the deck.
-var shuffledDeck = shuffleCards(deck);
-
-var main = function (input) {
-  // Draw 2 cards from the top of the deck
-  var computerCard = shuffledDeck.pop();
-  var playerCard = shuffledDeck.pop();
-
-  // Construct an output string to communicate which cards were drawn
-  var myOutputValue =
-    "Computer had " +
-    computerCard.name +
-    " of " +
-    computerCard.suit +
-    ". Player had " +
-    playerCard.name +
-    " of " +
-    playerCard.suit +
-    ". ";
-
-  // Compare computer and player cards by rank attribute
-  // If computer card rank is greater than player card rank, computer wins
-  if (computerCard.rank > playerCard.rank) {
-    // Add conditional-dependent text to the output string
-    myOutputValue = myOutputValue + "Computer wins.";
-    // Else if computer card rank is less than player card rank, player wins
-  } else if (computerCard.rank < playerCard.rank) {
-    myOutputValue = myOutputValue + "Player wins!";
-    // Otherwise (i.e. ranks are equal), it's a tie
-  } else {
-    myOutputValue = myOutputValue + "It's a tie.";
+    suit: 'hearts',
+    name: 'jack'
   }
-
-  // Return the fully-constructed output string
-  return myOutputValue;
-};
+];
 ```
 
-#### Q: How does the above code work?
+**Question 3:** Demonstrate this using the Chrome Dev Tools console. Now we have 3 cards (items) in the `cardDeck` array. How do I access the second card? What if I only wanted to access its name?
 
-#### Q: What would need to change so that the highest card _**loses**_ instead?
+**Answer 3:** For the first question we are still revising item retrieval from an array: we can retrieve the second card (assuming we are not looking at any specific key-value pairs) by typing in `cardDeck[1];` in the browser console. Students may forget that array indices count from 0, and may attempt to answer `cardDeck[2];` to retrieve the second card.
 
-A: Reverse the comparison operators.
+We progress to testing the understanding of key-value retrieval in objects by asking for a specific value. In this case, if we are retrieving the name of the second card, we can use any of the following:
 
-#### Q: What would need to be changed so that an emoji (♣️) could be displayed in addition to the suit name?
+```
+cardDeck[1].name;
+cardDeck[1]['name'];
+```
+As SLs doing the demonstration of using the square bracket notation for value retrieval, do note that we have to wrap the key as a string. `cardDeck[1][name]` is going to work differently from `cardDeck[1]['name']`. You can refer to the differences below:
 
-A: Add each emoji to each card object. (This is inefficient but would make sense if the cards are being created in a loop).
+```
+var cardDeck = [
+  {
+    rank: 9,
+    suit: 'hearts',
+    name: 'nine'
+  },
+  {
+    rank: 10,
+    suit: 'hearts',
+    name: 'ten'
+  },
+  {
+    rank: 11,
+    suit: 'hearts',
+    name: 'jack'
+  }
+];
 
-```javascript
-{
-    name: 'two',
-    rank: 2,
-    suit: 'clubs',
-    suitEmoji: '♣️'
+// set up name variable for wrong use example
+var name = 'suit';
+
+// prints 'hearts' instead, because
+// name is a variable containing the string
+// 'suit'. by using name not wrapped as a
+// string, JavaScript thinks you are accessing
+// the variable instead of object key.
+console.log(cardDeck[1][name]);
+
+// correct use of square bracket notation,
+// prints 'ten' correctly
+console.log(cardDeck[1]['name']);
+```
+
+**Question 4:** Demonstrate this using the Chrome Dev Tools console. How can the suit of the first card be changed to 'diamonds'?
+
+**Answer 4:** `cardDeck[0].suit = 'diamonds';`
+
+**Question 5:** Demonstrate this using the Chrome Dev Tools console. Now that the first card's suit is changed to 'diamonds', I want to add a symbol key to match its suit name, ie. ⬥. How will I do it? 
+
+**Answer 5:** `cardDeck[0].symbol = '⬥';`
+
+**Question 6:** Demonstrate all of the code below this question using the starter code. This is a game that draws 1 card each for the player and the computer, and the highest card wins. What would need to change so that the highest card ***loses*** instead?
+
+**Answer 6:** Reverse the comparison operators. Specifically:
+
+```
+// Compare computer and player cards by rank attribute
+// If computer card rank is LESS than player card rank, computer wins
+if (computerCard.rank < playerCard.rank) {
+  // Add conditional-dependent text to the output string
+  myOutputValue = myOutputValue + 'Computer wins.';
+  // Else if computer card rank is GREATER than player card rank, player wins
+} else if (computerCard.rank > playerCard.rank) {
+  myOutputValue = myOutputValue + 'Player wins!';
+  // Otherwise (i.e. ranks are equal), it's a tie
+} else {
+  myOutputValue = myOutputValue + "It's a tie.";
 }
 ```
 
-## In-Class Material
+## 3.7 Creating Objects with Loops
 
-[Day 8: Beat That Redux](../in-class-exercises/day-8-beat-that-redux.md)
+### Overview
 
-## Post-Class: Begin Project
+This module ties together everything we've learned to create a data structure that should feel intuitive to the students - a deck of cards. The main concept is the connection of the idea of the deck pattern and the syntax choices that have to be made in order to get the code to run.
 
-### [Project 3: Blackjack](../projects/project-3-blackjack.md)
+The `makeDeck` function takes the specific patterns in a deck of cards- 4 repeating suits, 15 ranked numbers, and the special exception of face card names instead of numbers- and turns them into loops, conditionals and arrays of objects.
 
-This card game is the final project, the accumulation of everything we've learned. The core of this project is a card game that has some complexity to it, so we've given some instructions that should help break it down and make it easier.
+This idea of connecting together a pattern and data representation (a deck of cards) and JavaScript data structures and syntax (arrays, object, conditionals and loops) is at the heart of coding and writing algorithms. In this example code we've created a card deck creation algorithm. Certainly there are many more possible card deck creation algorithms that will give us the same result.
 
-With any complex project it's important to break down a large goal into smaller sub-goals. This can be very challenging for new programmers, so this has been done ahead of time. It is _**very, very, strongly recommended**_ to follow the order of work that we've specified in the project page.
+Remind the students that in order to move forward with the Blackjack project, it's not strictly necessary to implement the `makeDeck` function or write it from scratch. Making a deck is just a demonstration of how to put together all the syntaxes we've seen so far.
 
-Note that we've structures the schedule so that there is a peer-review code session _**before**_ the project deadline, so that you can get some feedback on your work and continue to work on the game.
+### Code Examples and Discussion Questions
+
+**Question 7:** Demonstrate this using the Chrome Dev Tools console. Have a look at this original example of setting up an entire deck of cards (array of objects). What could be problematic with this approach?
+
+**Answer 7:** This approach isn't logically wrong, but it can be tedious. As SLs, we may have noticed copying and pasting this code into the Chrome Dev Tools console already require so much scrolling!
+
+Card generation can be a lot simpler when we know there are patterns to what constitutes a card in our program. In its most basic, a card has to have a name, a suit, and a rank. 
+
+We know that the rank can essentially be a counter starting from 1 and ending possibly at 13 (13 cards for each of the 4 suits), thus a loop will be useful for automating a deck's creation. The name is just a string version of the rank, and we can extrapolate this with a few conditions for matching a numbered rank to a face card (eg. Jack) for instance. 
+
+Lastly, we know there are only 4 suits each card. Thus, some loop nesting (a loop that runs 4 times) will exist to create the 4 suits for each card.
+
+**Question 8:** Demonstrate all of the code below this question using the starter code. The comments have been stripped from the `makeDeck` function. Have students run through the logic of `makeDeck` line by line.
+
+**Answer 8:** An alternative approach to demonstrating this `makeDeck` function is re-creating this `makeDeck` function from scratch with your students. This depends on the time you have before starting the in-class exercises.
+
+The key learning points from this discussion question:
+
+* We firstly identify what constitutes a card: a name, a rank, and a suit.
+* Then we define a deck: 4 suits of cards, with 13 cards per suit. This makes a deck a set of 52 cards.
+* When we want to create this with a loop, we may nest loops. The parent loop can start with suits, and the 13 cards being the child loop, or vice versa.
+* Card suits can be stored as arrays, so we need only start from index 0, and count to the length of the array. This approach is useful should we want to add more suits.
+* Card ranks can be visualised as a loop counter, given that they go from 1 (for Aces) to 13 (for Kings). Do note that we will want the counter to start from `1` in this case, instead of their usual `0`.
+* Card names should largely be string versions of their ranks. There are exceptions, such as Aces, Jacks, Queens and Kings. If-else conditions can be set up for these instances, to match their ranks to their names.
+
+**Question 9:** Demonstrate all of the code below this question using the starter code. The `printDeck` function has been edited to show the symbol of the suit, instead of its textual name. How will we add the symbol of the suit in the `makeDeck` function, assuming its key is `symbol`? Template symbols for copying and pasting: ♥️, ♦️, ♣️, ♠️
+
+**Answer 9:** A sample solution with just modifications to `makeDeck`:
+
+```
+var makeDeck = function () {
+  var cardDeck = [];
+  var suits = ['hearts', 'diamonds', 'clubs', 'spades'];
+  // just like suits, we can set up symbols as an array
+  var symbols = ['♥️', '♦️', '♣️', '♠️'];
+
+  var suitIndex = 0;
+  while (suitIndex < suits.length) {
+    var currentSuit = suits[suitIndex];
+    // since symbols is ordered (index number) like suits, 
+    // we can continue using suitIndex to access the correct symbol
+    var currentSymbol = symbols[suitIndex]
+
+    var rankCounter = 1;
+    while (rankCounter <= 13) {
+      var cardName = rankCounter;
+
+      if (cardName == 1) {
+        cardName = 'ace';
+      } else if (cardName == 11) {
+        cardName = 'jack';
+      } else if (cardName == 12) {
+        cardName = 'queen';
+      } else if (cardName == 13) {
+        cardName = 'king';
+      }
+
+      var card = {
+        name: cardName,
+        suit: currentSuit,
+        rank: rankCounter,
+        // remember to initialise the symbol key in card
+        symbol: currentSymbol
+      };
+
+      cardDeck.push(card);
+
+      rankCounter += 1;
+    }
+
+    suitIndex += 1;
+  }
+
+  return cardDeck;
+};
+```
 
 ## Wrap-Up / Look Ahead
 
-This section is the end of the main JavaScript syntaxes we'll cover. There are some others we haven't touched on, but the ones we have covered are the ones present in almost all programming languages, and are the most important. We now have all the most important tools needed to build almost any program.
+The Document Object Model (DOM) and manipulating it are intended to connect back together JavaScript code that would usually be written outside the context of the starter code. It ties together the students' fundamental understanding of HTML and CSS, together with the logic written in JavaScript.
 
-Moving forward from here we'll be covering more details on how to build our programs, doing some more complex example programs and more on how to debug, but we won't be introducing any new major JavaScript syntaxes.
+It also details how the starter code works.
