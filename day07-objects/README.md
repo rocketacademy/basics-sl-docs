@@ -26,7 +26,7 @@ Sometimes assignment into a given key can look confusing: `card.rank = newRank;`
 
 **Question 2:** Demonstrate this using the Chrome Dev Tools console. In the line below, what will be the pseudocode for getting the numerical sum of the ranks?
 
-**Answer 2:** The actual code example may require string splitting, which the students may not be fully comfortable with. It is okay to stick to asking for a layman pseudocode logic for how they will achieve this.
+**Answer 2:** The actual code example may require string splitting using the `.split` method (see [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split)), which the students may not be fully comfortable with. It is okay to stick to asking for a layman pseudocode logic for how they will achieve this.
 
 ```
 // loop over the array
