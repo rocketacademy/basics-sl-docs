@@ -23,3 +23,7 @@ We've already seen debugging with the simple tool of `console.log`. Sometimes th
 Firstly open your Sources tab with the `index.html` loaded with the `script.js` example. You will want to set 2 breakpoints on these 2 lines.
 
 <img width="524" alt="Screenshot 2022-02-20 at 2 49 23 AM" src="https://user-images.githubusercontent.com/7672836/154814798-b69b9398-9b84-4cc2-b1d9-b68390028124.png">
+
+Let's assume an input of `3`. Type in 3, and hit Submit. Your browser should stop the execution of the code before the initialisation of `innerCounter` in the outer loop. Click on the "Step over next function call" button a few times to run lines 7 to 18 sequentially, showing the results in the Sources tab as you go along. The button is the 2nd icon in the screenshot below.
+
+The result should look like this:
