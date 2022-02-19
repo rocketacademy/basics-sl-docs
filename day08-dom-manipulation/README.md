@@ -69,10 +69,70 @@ var main = function (input) {
 
 When we input a text and click the Submit button, it will be printed in grey output box as we are already used to.
 
-There's a caveat: all of our input (previous or current) will also be printed as a paragraph in the rest of the container space below the grey output box. 
+There's a caveat: all of our input (previous or current) will also be printed as paragraphs in the rest of the container space below the grey output box. 
 
 Since we are using the `.appendChild` method, every new paragraph will be inserted (as a child) to the bottom of the container. Thus, the paragraphs are seemingly sorted from oldest to latest.
 
 ## 6.2: DOM Manipulation
 
 ### Overview
+
+Whie we have started discussing DOM manipulation in the context of the starter code as early as the previous module, we will be diving deeper into events pertaining to our inputs.
+
+A good introduction will be revisiting the starter code HTML script, namely:
+
+```
+<script>
+  // Declare and define a variable that represents the Submit Button
+  var button = document.querySelector("#submit-button");
+  // When the submit button is clicked, access the text entered by the user in the input field
+  // And pass it as an input parameter to the main function as defined in script.js
+  button.addEventListener("click", function () {
+    // Set result to input value
+    var input = document.querySelector("#input-field");
+    // Store the output of main() in a new variable
+    var result = main(input.value);
+
+    // Display result in output element
+    var output = document.querySelector("#output-div");
+    output.innerHTML = result;
+
+    // Reset input value
+    input.value = "";
+  });
+</script>
+```
+
+Students can read this code snippet and try to explain in their words what they mean. It's okay if they are using the code comments as cues - what's important is their class participation and interpretation of the comments.
+
+Next, we can begin looking at creating our own basic event handlers and listeners. This is in the event students wish to define their own interfaces for the Blackjack project, such as directly interacting with card images instead of using the given input field and Submit button.
+
+### Code Examples and Discussion Questions
+
+**Question 4:** Refer to this block of code in the starter code home page HTML file (it's copied below this question for the SL's reference). What does this code do?
+
+**Answer 4:** Again, it's fine if the students are interpreting this using the code comments as cues. Sequentially, this is what happens:
+
+* The Submit button is selected for use using the `.querySelector` method.
+* A "click" event listener is added to the button, so that the program does something when the selected button is clicked.
+* When the button is clicked, the input field is selected, so that its value (what you type in the input field) can be used later.
+* The input field's value is passed as argument to the `main` function, where its `return` value is stored in the variable `result`. This is similar to how students have executed functions and used their `return` values throughout the course.
+* This `result` variable's value is then printed into the grey output box, selected using the `output` variable.
+* At the end, we reset what's typed in the input field for the convenience of users keying in new inputs.
+
+**Question 5:** Demonstrate all of the code below this question using the starter code. Let's create a "Click Me!" button next to the original Submit button. We will attach an event listener to it. What does the button do?
+
+**Answer 5:** You may want to break this question up, to get different students to explain the code snippet 1 student per line. The gist is we now have a button that randomly sets a new background color to the original white container. Sequentially:
+
+* We create a "Click Me!" button in index.html, and give it an ID of `click-me-button`.
+* We select it using the `.querySelector` method in the script.
+* We add a click event listener to it.
+* On clicking the button, it selects the container, and then sets a randomly generated background color to it. The range of colors are pre-defined in an array.
+
+## Wrap-Up / Look Ahead
+
+There is a bit more time to continue working on the project. It's not required to switch to working on the More Comfortable tasks if the Base version is not yet done.
+
+We can use the in-class session after the demonstrations to have students work on Base together, or embark on More Comfortable together when they are ready. It will be a good idea to pair students for this in-class exercise based on similar levels of project completion.
+
+Next session, students will be presenting their Blackjack projects. Do remind them to deploy their Blackjack projects to Github Pages before the next class.
