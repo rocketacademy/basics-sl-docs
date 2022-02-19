@@ -1,201 +1,78 @@
-# Day 12: DOM, Project Presentations
+# Day 8: Document Object Model (DOM)
 
-## **Overview**
+## Overview
 
-This is the last class meeting!\
-\
-Mention to the students that this day isn't meant as a full review of the pre-class material. The pre-class material is meant as a look ahead into what is possible with JavaScript given the tools that have already been covered.
+The day's pre-class material is mainly an investigation into what is possible with JavaScript given the tools that have already been covered, including HTML and CSS.
 
-### Class Schedule
+## 6.1: The Document Object Model
 
-1. 1:00-2:00pm: Blackjack presentations
-2. 2:00-2:15pm: Post-Course Feedback Form and reviews
-3. 2:15-2:30pm: LinkedIn Certs
-4. 2:30-3:00pm: Closing Ceremony in Main Zoom Room
+### Overview
 
-## **Project Due**
+This section is largely conceptual, with the only key applications being:
 
-#### [Project 3: Blackjack (More Comfortable)](../projects/project-3-blackjack.md#more-comfortable)
+* Referencing HTML elements in JavaScript
+* Manipulating the HTML elements referenced in their code
 
-Deploy Blackjack to the internet with instructions from [Module 12.3: Deployment](../12-next-steps/12.3-deployment.md)
+These tools will be useful for more ambitious students looking to re-structure their starter code templates for their Blackjack project, such as doing away with the input field and interacting directly with card images.
 
-## Pre-Class Material
+Chiefly, SLs have to be able to explain the DOM and its uses. In code, the DOM is ultimately made up of 2 variables called `window` and `document`. They are created by the browser and represent everything that's happening in the window and on the page.
 
-Total Video Watch Time: **\~22 mins**
+Almost every website now uses the DOM to display things on the screen. Google Sheets is a good example (click [here](https://docs.google.com/spreadsheets/d/1LjRxTu0E9lwAPRYc_WFYsFEAA4WAEjAP65igIHm_PwY/edit?usp=sharing) for a sample template).
 
-### [12.1: Browser Applications with DOM](../12-next-steps/12.1-browser-applications-with-dom.md)
+Google sheets uses the DOM in combination with all of the data in the Google Sheets database to create and update the screen that users see. The data that is displayed on the page is represented as arrays and strings and objects inside the Google system (among other representations) and is displayed on the screen of the browser using the DOM.
 
-#### Q: What is the DOM?
+### Code Examples and Discussion Questions
 
-A: The DOM is two variables called `window` and `document`. They are created by the browser and represent everything that's happening in the window and on the page.
+**Question 1:** Copy all of the code below this question into your starter code root script.js. What does the first line where newButton is initialised do?
 
-#### Q: What can you use the DOM for?
+**Answer 1:** It selects the HTML element with the ID (marked by `#`) `submit-button` so that you can manipulate it in your JavaScript code.
 
-A: Almost every website now uses the DOM to display things on the screen.
+We can do a `console.log(newButton);` just to show students that the button is successfully selected.
 
-Example: Google Sheets: [https://docs.google.com/spreadsheets/d/1LjRxTu0E9lwAPRYc_WFYsFEAA4WAEjAP65igIHm_PwY/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1LjRxTu0E9lwAPRYc_WFYsFEAA4WAEjAP65igIHm_PwY/edit?usp=sharing)\
-\
-Google sheets uses the DOM in combination with all of the data in Google's Sheets database to create and update the screen that users see. The data that is displayed on the page is represented as arrays and strings and objects inside the google system (among other representations) and is displayed on the screen of the browser using the DOM.
+**Question 2:** Copy all of the code below this question into your starter code root script.js. Given this newButton variable, how will we change the text displayed in it to say "Click me!" instead?
 
-#### index.html
-
-```markup
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Basics</title>
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: sans-serif;
-        margin-left: 30px;
-        margin-right: 30px;
-      }
-
-      #header {
-        text-align: center;
-      }
-
-      #container {
-        background-color: pink;
-        margin: 40px auto;
-        max-width: 800px;
-        padding: 38px 31px;
-      }
-
-      input {
-        font-size: 21px;
-        line-height: 33px;
-        margin: 0 0 23px 0;
-        padding: 0 9px;
-        width: 100%;
-      }
-
-      button {
-        font-size: 21px;
-        line-height: 33px;
-        margin: 0 0 23px 0;
-        padding: 0 6px;
-      }
-
-      #output-div {
-        background-color: lightgrey;
-        margin: 20px auto;
-        padding: 20px;
-        width: 100%;
-      }
-    </style>
-  </head>
-
-  <body>
-    <h1 id="header">Basics! 🚀</h1>
-    <div id="container">
-      <p>Input:</p>
-      <input id="input-field" />
-      <br />
-      <button id="submit-button">Submit</button>
-      <p>Output:</p>
-      <div id="output-div"></div>
-    </div>
-    <!-- Import program logic -->
-    <script src="script.js"></script>
-    <!-- Define button click functionality -->
-    <script>
-      var button = document.querySelector("#submit-button");
-      button.addEventListener("click", function () {
-        // Set result to input value
-        var input = document.querySelector("#input-field");
-        var result = main(input.value);
-
-        // Display result in output element
-        var output = document.querySelector("#output-div");
-        output.innerHTML = result;
-
-        // Reset input value
-        input.value = "";
-      });
-    </script>
-  </body>
-</html>
+**Answer 2:** We can do so this way:
 
 ```
+var newButton = document.querySelector("#submit-button");
+// Change the inner text of submit button
+newButton.innerText = "Click me!"
 
-#### script.js
-
-```javascript
 var main = function (input) {
-  var myOutputValue = "hello world";
+  var myOutputValue = 'hello world';
   return myOutputValue;
 };
 ```
 
-Review the starter code for the students- inside a script tag in `index.html` is the heart of how the starter code DOM manipulation works. Here is a concise commented version of the above. Note that this assumes the main function defined above.
+Do note that this example isn't the most useful for regular rendering work - `newButton`'s `innerText` will change to "Click me!" when `script.js` loads. This is not very different from changing the button text in the HTML file. Usually if we want to set the initial rendering of elements in the page, we prefer to do it directly in the HTML file.
 
-```javascript
-var button = document.querySelector("#submit-button");
+A more useful application will be manipulating the DOM on certain circumstances that can be interpreted only with JavaScript - such as updating the button text on meeting a logical condition. In the example below, we have the button text show the number of times (after 0) it has been clicked:
 
-// the function that will run when the submit button is clicked
-var handleSubmitClick = function () {
-  // put the input field DOM element into a variable
-  var input = document.querySelector("#input-field");
+```
+var newButton = document.querySelector("#submit-button");
+// global counter for tracking button click
+var counter = 0;
 
-  // get out the value the user typed
-  var userTypedValue = input.value;
-
-  // run the main function defined in script.js:
-  //   a) pass in the typed value as a parameter
-  //   b) capture the returned value in the result variable
-  var result = main(userTypedValue);
-
-  // put the grey box element into a variable
-  var output = document.querySelector("#output-div");
-
-  // set the content of the grey box to
-  // the value returned out of main
-  output.innerHTML = result;
-
-  // Reset input value to blank
-  input.value = "";
+var main = function (input) {
+  // main runs on button click, increment counter
+  counter += 1;
+  var myOutputValue = 'hello world';
+  // Change the inner text of submit button
+  newButton.innerText = `I have been clicked ${counter} time(s)!`
+  return myOutputValue;
 };
-
-// set the function to run when the button gets clicked
-button.addEventListener("click", handleSubmitClick);
 ```
 
-#### Q: How does the above code work?
+**Question 3:** Copy all of the code below this question into your starter code root script.js. What does this program do?
 
-### [12.2: HTML, CSS Review](../12-next-steps/12.2-html-css-review.md)
+**Answer 3:** The first line selects the white container in the starter code.
 
-## In-Class Material
+When we input a text and click the Submit button, it will be printed in grey output box as we are already used to.
 
-### [Project Presentations](../course-logistics/course-methodology/#project-presentations)
+There's a caveat: all of our input (previous or current) will also be printed as a paragraph in the rest of the container space below the grey output box. 
 
-Congratulate everyone on a job well done!! 🎉
+Since we are using the `.appendChild` method, every new paragraph will be inserted (as a child) to the bottom of the container. Thus, the paragraphs are seemingly sorted from oldest to latest.
 
-Emphasise that for this course it's not about how many features of Blackjack that were completed in the project, it's about what they were able to accomplish and understand about coding.
+## 6.2: DOM Manipulation
 
-Ask the students to reflect on their level of knowledge six weeks ago.
-
-### **Course Feedback and Reviews**
-
-#### Review links
-
-1. SwitchUp: [https://www.switchup.org/bootcamps/rocket-academy](https://www.google.com/url?q=https://www.switchup.org/bootcamps/rocket-academy&sa=D&source=editors&ust=1625291865969000&usg=AFQjCNH39J3LKDV1-38Sls050tRr9zEBXg)
-2. Google Business: [https://g.page/rocket-academy-co/review?rc](https://www.google.com/url?q=https://g.page/rocket-academy-co/review?rc&sa=D&source=editors&ust=1625291865970000&usg=AFQjCNGvwlXotNRLE7I9jMmGmHgWjp76dA)
-
-### **LinkedIn Certificate Presentations**
-
-Invite the RACert Bot into your Slack Channel by mentioning it for the first time: @RACertBot.
-
-Generate certificates for each student by mentioning @RACertBot followed by each student's @username in Slack
-
-Share with students how they can add Rocket Academy's Coding Basics Certificate badge to their LinkedIns. [Instructions here](../course-logistics/post-course/linkedin-certificates.md).
-
-### **Class Photo 🥳**
-
-Please take a screenshot in Zoom gallery view that we can use as the profile photo for the section alumni group chat in Telegram!&#x20;
-
-After the photo, class is officially over, but please encourage students to use the remaining class time to help RA by sharing feedback and public reviews of our course.
+### Overview
