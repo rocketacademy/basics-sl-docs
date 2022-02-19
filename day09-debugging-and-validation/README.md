@@ -66,5 +66,7 @@ The variables are named this way, because the `outerCounter` sets the rows (top 
 
 Assuming the same breakpoints as Question 2, and the same input of `3`, running "Step over next function call" within the first iteration (of both the inner and outer loop) should give us results similar to the screenshot below:
 
+<img width="1205" alt="Screenshot 2022-02-20 at 3 22 44 AM" src="https://user-images.githubusercontent.com/7672836/154815882-7c365a4b-7f50-420d-9668-7dd1aa1ba0dd.png">
+
 This means that `(outerCounter == 0)` and `(innerCounter == 0)` are `true` in the first iteration (first time the loop runs).
 
