@@ -16,7 +16,7 @@ We've already seen debugging with the simple tool of `console.log`. Sometimes th
 
 **Answer 1:** Two loops create a square emoji figure. The condition evaluates if the loops are at an edge. An edge is defined as being either: (a) Beginning of either loop, or (b) end of either loop. 
 
-**Question 2:** Using the same code from Question 1, what is the value of outerCounter and innerCounter when the program draws the top middle fist? Use the debugger to find that value.
+**Question 2:** Using the same program from Question 1, what is the value of outerCounter and innerCounter when the program draws the top middle fist? Use the debugger to find that value.
 
 **Answer 2:** There is no right answer for this, and it really depends on the input.
 
@@ -37,3 +37,34 @@ The result in the above screenshot shows the first iteration of the inner loop, 
 <img width="1205" alt="Screenshot 2022-02-20 at 3 01 54 AM" src="https://user-images.githubusercontent.com/7672836/154815148-c7e9e1a9-ce31-4e63-9dc9-6876385079f6.png">
 
 Per the screenshot, when the input is `3`, the top middle fist (2nd fist in the top row) is printed when `outerCounter` is still `0` and `innerCounter` is `1`.
+
+**Question 3:** Using the same program from Question 1, what is the result of each conditional statement the first time the loop runs? Use the debugger to find the value.
+
+**Answer 3::** Per the screenshot below, it will not be immediately obvious what the result of each conditional statement is. This is because the Sources tab will provide you the value of the variables used in each sub-condition, but not the truthy nor falsy evaluation of the sub-conditions.
+
+<img width="1205" alt="Screenshot 2022-02-20 at 3 01 54 AM" src="https://user-images.githubusercontent.com/7672836/154815148-c7e9e1a9-ce31-4e63-9dc9-6876385079f6.png">
+
+A trick to employ is to store the sub-conditions as variables. Remember that the results of the evaluation of these sub-conditions are Boolean values? Before setting the conditions, you can define the sub-conditions this way:
+
+```
+// If current iteration represents a border element, draw ✊ instead.
+var isOuterCounterTopEdge = (outerCounter == 0);
+var isOuterCounterBottomEdge = (outerCounter == sideLength - 1);
+var isInnerCounterLeftEdge = (innerCounter == 0);
+var isInnerCounterRightEdge = (innerCounter == sideLength - 1);
+
+if (isOuterCounterTopEdge || isOuterCounterBottomEdge
+  || isInnerCounterLeftEdge || isInnerCounterRightEdge) {
+  myOutputValue += '✊';
+} else {
+  // Add a 👍 to the current row
+  myOutputValue += '👍';
+}
+```
+
+The variables are named this way, because the `outerCounter` sets the rows (top to bottom) in the square, while the `innerCounter` sets the columns (left to right). The proof is that we add a line break `<br>` before incrementing the `outerCounter`, thus a new line (row) is created after every iteration of `outerCounter`.
+
+Assuming the same breakpoints as Question 2, and the same input of `3`, running "Step over next function call" within the first iteration (of both the inner and outer loop) should give us results similar to the screenshot below:
+
+This means that `(outerCounter == 0)` and `(innerCounter == 0)` are `true` in the first iteration (first time the loop runs).
+
