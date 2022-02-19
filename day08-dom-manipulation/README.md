@@ -131,8 +131,4 @@ Next, we can begin looking at creating our own basic event handlers and listener
 
 ## Wrap-Up / Look Ahead
 
-There is a bit more time to continue working on the project. It's not required to switch to working on the More Comfortable tasks if the Base version is not yet done.
-
-We can use the in-class session after the demonstrations to have students work on Base together, or embark on More Comfortable together when they are ready. It will be a good idea to pair students for this in-class exercise based on similar levels of project completion.
-
-Next session, students will be presenting their Blackjack projects. Do remind them to deploy their Blackjack projects to Github Pages before the next class.
+Next we'll cover one last thing, which is the ability to see ***into*** our code with the Chrome Dev Tools with the debugger. The debugger is the most granular tool we can use to analyze what our code is doing. Building a correct mental model of how the code works during debugging is the key task to fixing errors. Sometimes we may need to look at a particular value in order to do that.
