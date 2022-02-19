@@ -70,3 +70,12 @@ Assuming the same breakpoints as Question 2, and the same input of `3`, running 
 
 This means that `(outerCounter == 0)` and `(innerCounter == 0)` are `true` in the first iteration (first time the loop runs).
 
+## Wrap-Up / Look Ahead
+
+This lesson is deliberately structured to be short, with most of the work being experiments students can run on the Sources tab before the class or after the class (if they have not already done so).
+
+The majority of the class today will be their in-class pair programming work to get either the rest of their Blackjack Base requirements up, or begin working on the More Comfortable sections.
+
+Most former SLs recommend pairing students by similar extents of completion - group students who are struggling with Base together, and those working on More Comfortable together. This is to encourage participation and sharing of knowledge, without any one member only passively participating in their pair assignment groups. Be prepared to jump in to guide groups that are stuck on their requirements.
+
+In the next session, students will be presenting their completed Blackjack projects. Do remind students to deploy their projects before their presentations, and they can do so following the instructions here: [https://codingbasics.rocketacademy.co/course-logistics/learning-environment/deployment](https://codingbasics.rocketacademy.co/course-logistics/learning-environment/deployment)
