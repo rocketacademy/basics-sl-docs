@@ -6,7 +6,7 @@ This is the last class meeting!
 
 Time may be a little tight, so give students about 3 to 5 minutes per presentation (depending on section size). Students can be encouraged to structure their presentations in the following manner:
 
-* A demonstration on what they have achieved in the Blackjack project
+* A demo of their Blackjack project
 * What are they the most proud of achieving for this project (or this course)?
 * Given more time on this project, what other new features will they add?
 
