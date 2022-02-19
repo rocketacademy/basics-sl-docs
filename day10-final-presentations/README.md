@@ -4,7 +4,11 @@
 
 This is the last class meeting!
 
-Time may be a little tight, so give students about 3 to 5 minutes per presentation (depending on section size).
+Time may be a little tight, so give students about 3 to 5 minutes per presentation (depending on section size). Students can be encouraged to structure their presentations in the following manner:
+
+* A demonstration on what they have achieved in the Blackjack project
+* What are they the most proud of achieving for this project (or this course)?
+* Given more time on this project, what other new features will they add?
 
 After their presentations, they will be voting on the Most Creative project of the section. As SLs, we get to nominate the student who is the Most Improved!
 
