@@ -2,7 +2,7 @@
 
 ## Overview
 
-Arrays express the idea of a value made up of discrete composite values, in the way a week is composed of days, or a book of pages. This section introduces the array as a type of value. 
+Arrays express the idea of a value made up of discrete composite values, in the way a week is composed of days, or a book of pages. This section introduces the array as a type of value.
 
 Using loops as our control flow, we will introduce the code needed to iterate over an arbitrary sized array. The integer location of the index and the counter in the loop match up perfectly to allow us to process every item in an array. This allows us to further expand the amount of data our programs can deal with.
 
@@ -70,7 +70,7 @@ This will be good practice for using Boolean flags.
 
 ## Look Ahead / Wrap Up
 
-Students will begin working on [Project 2: Beat That!](https://basics.rocketacademy.co/projects/project-2-beat-that) by the end of the class.
+Students will begin working on [Project 2: Beat That!](https://codingbasics.rocketacademy.co/projects/project-2-beat-that) by the end of the class.
 
 Given what we have known so far about the different data types, global values and control flow, we will begin building programs that can ask for different kinds of input. Next, we will be looking at techniques for verifying this input.
 
@@ -78,8 +78,8 @@ Additionally, we will be introducing HTML and CSS. Being able to structure and l
 
 ## Post-Class: Begin Project 2 Beat That!
 
-Introduce the project: [Beat That!](https://basics.rocketacademy.co/projects/project-2-beat-that) Unlike Project 1 Scissors Paper Stone, Project 2 Beat That! will not be split into phases.
+Introduce the project: [Beat That!](https://codingbasics.rocketacademy.co/projects/project-2-beat-that) Unlike Project 1 Scissors Paper Stone, Project 2 Beat That! will not be split into phases.
 
-Time management is paramount, and students will have to learn to pace themselves while working on the project. Of course, students hoping to embark on the [Comfortable](https://basics.rocketacademy.co/projects/project-2-beat-that#comfortable) and [More Comfortable](https://basics.rocketacademy.co/projects/project-2-beat-that#more-comfortable) requirements will have to plan their time well for the next 1 week.
+Time management is paramount, and students will have to learn to pace themselves while working on the project. Of course, students hoping to embark on the [Comfortable](https://codingbasics.rocketacademy.co/projects/project-2-beat-that#comfortable) and [More Comfortable](https://codingbasics.rocketacademy.co/projects/project-2-beat-that#more-comfortable) requirements will have to plan their time well for the next 1 week.
 
 Make sure everyone understands when the project is due.
