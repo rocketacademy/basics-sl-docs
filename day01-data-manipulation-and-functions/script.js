@@ -2,26 +2,27 @@
 2 + 2;
 4 - 2;
 
-// QUESTION: Which of the following is the correct use of the multiplication operator?
+// QUESTION 1: Run these in the Chrome Dev Tools console. Which of the following is the correct use of the multiplication operator?
 4 x 2;
 4 * 2;
 
+// QUESTION 2: Run this in the Chrome Dev Tools console. What is the expected result of this operation?
 5 / 2;
 
-// QUESTION: What does 5 % 2 give us, and what does the '%' in '5 % 2' do?
+// QUESTION 3: Run this in the Chrome Dev Tools console. What does 5 % 2 give us, and what does the '%' in '5 % 2' do?
 5 % 2;
 
 // 1.2: VARIABLES
-// QUESTION: What does the `=` in `var pi = 3.14` mean?
+// QUESTION 4: Run the statements below this question in the Chrome Dev Tools console. What does the `=` in `var pi = 3.14` mean?
 var pi = 3.14;
 var radius = 4;
 var area = pi * radius * radius;
 
-// QUESTION: Compare the next 2 lines for the calculation of area with how the area is calculated earlier, `var area = pi * radius * radius;`. Why is the previous method better?
+// QUESTION 5: Copy the statements below in this question into the Chrome Dev Tools console, but there's no need to run them. Compare the next 2 lines for the calculation of area with how the area is calculated earlier, `var area = pi * radius * radius;`. Why is the previous method better?
 var area = 3.14 * 4 * 4;
 var a = x * y * y;
 
-// QUESTION: Which of the following lines represent the correct use of camel casing for naming variables?
+// QUESTION 6: Run the statements below this question in the Chrome Dev Tools console. Which of the following lines represent the correct use of camel casing for naming variables?
 var areaOfCircle = 1;
 var AreaOfCircle = 1;
 var areaofcircle = 1;
@@ -35,8 +36,8 @@ var myName = "Kai";
 var company = "Rocket Academy";
 "Hi, my name is " + myName + " and I am the founder of " + company;
 
-// QUESTION: What is the value stored in `result`?
-var num = 3
+// QUESTION 7: Run the statements below this question in the Chrome Dev Tools console. What is the value stored in `result`?
+var num = 3;
 var result = "3" + num;
 
 // String concatenation using template literals.
@@ -55,7 +56,7 @@ var area = pi * radius * radius;
 
 
 // 2.3.1 FUNCTIONS I
-// QUESTION: What does this `main` function do?
+// QUESTION 8: Copy the `main` function below this question into the starter code home page script.js. What does this `main` function do?
 var main = function (input) {
   console.log('papaya');
   // store input as distanceInKm

@@ -12,7 +12,7 @@ This day has a heavier section of content than the other days so be prepared for
 
 **Running on time is important.** Respect people's time - begin the session on time and don't end only after the end time.
 
-## 1.1 Basic Operations
+## [1.1 Operations](https://codingbasics.rocketacademy.co/modules/1-data-types-structures-and-manipulations/1.1-operations)
 
 ### Overview
 
@@ -22,15 +22,19 @@ This section is relatively intuitive. It is important to establish here that an 
 
 For the code examples listed in `script.js`, it will be best to show them in the Chrome Dev Tools console because the results will be printed.
 
-**Question:** Which of the following is the correct use of the multiplication operator?
+**Question 1:** Run these in the Chrome Dev Tools console. Which of the following is the correct use of the multiplication operator?
 
-**Answer:** The `4 * 2` example is correct. The `4 x 2` example will throw an error stating that there is an unexpected identifier: JavaScript thinks the `x` in the syntax refers to a name of a variable.
+**Answer 1:** The `4 * 2` example is correct. The `4 x 2` example will throw an error stating that there is an unexpected identifier: JavaScript thinks the `x` in the syntax refers to a name of a variable.
 
-**Question:** What does `5 % 2` give us, and what does the `%` in `5 % 2` do?
+**Question 2:** Run this in the Chrome Dev Tools console. What is the expected result of this operation?
 
-**Answer:** The `%` in `5 % 2` is a modulo operator. It gives the non-negative remainder of the result of a division. `5 % 2` is equivalent to `5 / (2 * 2)` or `5 - 2 - 2`, which is `1`.
+**Answer 2:** `2.5`
 
-## 1.2 Variables
+**Question 3:** Run this in the Chrome Dev Tools console. What does `5 % 2` give us, and what does the `%` in `5 % 2` do?
+
+**Answer 3:** The `%` in `5 % 2` is a modulo operator. It gives the non-negative remainder of the result of a division. `5 % 2` is equivalent to `5 / (2 * 2)` or `5 - 2 - 2`, which is `1`.
+
+## [1.2 Variables](https://codingbasics.rocketacademy.co/modules/1-data-types-structures-and-manipulations/1.2-variables)
 
 ### Overview
 
@@ -40,29 +44,29 @@ From operations we add in variables. Here it is important to re-emphasise the co
 
 Again, it will be useful to demonstrate these in the Chrome Dev Tools console. This is because the Chrome Dev Tools console can print the output and results immediately, without the need for any use of `console.log` on the instructors' end.
 
-**Question:** What does the `=` in `var pi = 3.14` mean?
+**Question 4:** Run the statements below this question in the Chrome Dev Tools console. What does the `=` in `var pi = 3.14` mean?
 
-**Answer:** The `=` sign is an assignment operator. Assignment is not to be confused for equivalence, which is what we have come to know `=` to mean in mathematics. Equivalence operators will be taught much later in the conditional logic sections. 
+**Answer 4:** The `=` sign is an assignment operator. Assignment is not to be confused for equivalence, which is what we have come to know `=` to mean in mathematics. Equivalence operators will be taught much later in the conditional logic sections. 
 
 A useful analogy for assignment is to imagine creating a box named `pi`. By assigning `3.14` into the variable `pi`, we are putting this number in the box we just created. When we want to use the `3.14` number elsewhere, like in `var area = pi * radius * radius;`, we will retrieve this value from the `pi` box.
 
-**Question:** Compare the next 2 lines for the calculation of area with how the area is calculated earlier, `var area = pi * radius * radius;`. Why is the previous method better?
+**Question 5:** Copy the statements below in this question into the Chrome Dev Tools console, but there's no need to run them. Compare the next 2 lines for the calculation of area with how the area is calculated earlier, `var area = pi * radius * radius;`. Why is the previous method better?
 
-**Answer:** The variable naming is much better in the previous method. Variable naming is important because accurate representation is just as important as correct calculation.
+**Answer 5:** The variable naming is much better in the previous method. Variable naming is important because accurate representation is just as important as correct calculation.
 
 For `var area = 3.14 * 4 * 4;`, there is a repetition of the number `4` which represents the radius. Should the calculation require a change in the radius, the number `4` would have to be changed twice. It will be better to store the radius in a variable first to avoid repetition and use of arbitrary numbers which may not be obvious on first glance.
 
 For `var a = x * y * y;`, it can be tricky to understand the formula is for calculating the area of a circle on first glance. `a` can be better named as `area`, while `x` can be changed to `pi` and `y` to `radius`.
 
-**Question:** Which of the following lines represent the correct use of camel casing for naming variables?
+**Question 6:** Run the statements below this question in the Chrome Dev Tools console. Which of the following lines represent the correct use of camel casing for naming variables?
 
-**Answer:** `var areaOfCircle = 1;` is the correct line. Do enforce camel casing when naming your variables. Conventions and standardisation are important for readability, especially when working on larger code bases with multiple developers.
+**Answer 6:** `var areaOfCircle = 1;` is the correct line. Do enforce camel casing when naming your variables. Conventions and standardisation are important for readability, especially when working on larger code bases with multiple developers.
 
-**Question:** What is the value stored in `result`?
+**Question 7:** What is the value stored in `result`?
 
-**Answer:** We will get `"33"`, not `6`. This is because the `+` operator, when used on strings, concatenates them. The `3` from `num` will be converted into a string, and joined with the `"3"` string. Thus, you get `"33"`.
+**Answer 7:** We will get `"33"`, not `6`. This is because the `+` operator, when used on strings, concatenates them. The `3` from `num` will be converted into a string, and joined with the `"3"` string. Thus, you get `"33"`.
 
-## 2.1 Pseudocoding
+## [2.1 Pseudocoding](https://codingbasics.rocketacademy.co/modules/2-structuring-and-debugging-code/2.1-pseudo-coding)
 
 ### Overview
 
@@ -72,7 +76,7 @@ We can add two forward slashes at the start of a line to mark it as a comment, s
 
 Pseudocoding is also useful for thinking about the program's logic and technical requirements. You can demonstrate this in the in-class exercises: have the students copy and paste the exercise requirements in their JavaScript so that they need not constantly switch windows and tabs to refer to them.
 
-## 2.2 Our First Program
+## [2.2 Our First Program](https://codingbasics.rocketacademy.co/modules/2-structuring-and-debugging-code/2.2-our-first-program)
 
 ### Overview
 
@@ -103,9 +107,9 @@ You can begin demonstrating the code examples in `script.js` by copying them ove
 
 ### Code Examples and Discussion Questions
 
-**Question:** What does this `main` function do?
+**Question 8:** Copy the `main` function below this question into the starter code home page script.js. What does this `main` function do?
 
-**Answer:** This `main` function, when executed, will first log the string `"papaya"` into the browser console. It then converts a distance in kilometres (from the `input`) into miles.
+**Answer 8:** This `main` function, when executed, will first log the string `"papaya"` into the browser console. It then converts a distance in kilometres (from the `input`) into miles.
 
 ### FAQ
 
@@ -120,6 +124,10 @@ Q: Students think that in order to run more code, they copy the function and use
 A: Refactoring or recognizing a pattern that repeats itself within the code is something that the students should have in mind to practice.
 
 ## In-Class Material
+
+### Link to Exercises
+
+[Day 1: Data Manipulation and Functions](https://codingbasics.rocketacademy.co/coursework/in-class-exercises/day-1-data-manipulation-and-functions)
 
 ### Overview
 
