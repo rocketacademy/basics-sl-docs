@@ -1,5 +1,5 @@
 // 4.2 PROGRAM LIFECYCLE AND SCOPE
-// QUESTION: In the following function, it adds our input to `someNumber`. However, if we input `1` over and over again, we will keep getting `2` as the output. How do we change or move the code around such that the output increments everytime we input `1`? 
+// QUESTION 1: Copy the `main` function below this question into your starter code home page script.js. In the following function, it adds our input to `someNumber`. However, if we input `1` over and over again, we will keep getting `2` as the output. How do we change or move the code around such that the output increments everytime we input `1`? 
 var main = function (input) {
   var someNumber = 1;
   // cast input into a number, otherwise it will
@@ -8,7 +8,7 @@ var main = function (input) {
   return myOutputValue;
 };
 
-// QUESTION: What does the `main` function below do?
+// QUESTION 2: Copy `papayaCount` and `main` below this question into your starter code home page script.js. What does the `main` function below do?
 var papayaCount = 0;
 var main = function (input) {
   papayaCount = papayaCount + 1;
@@ -16,7 +16,7 @@ var main = function (input) {
   return myOutputValue;
 };
 
-// QUESTION: The code below is a dice game with a betting element. Our `bankRoll` increases when we win. How will you change the logic such that our `bankRoll` decreases when we lose?
+// QUESTION 3: Copy `bankRoll` and `main` below this question into your starter code home page script.js. The code below is a dice game with a betting element. Our `bankRoll` increases when we win. How will you change the logic such that our `bankRoll` decreases when we lose?
 var bankRoll = 10;
 
 var main = function (input) {
@@ -34,16 +34,18 @@ var main = function (input) {
 };
 
 // 4.3 PROGRAM STATE FOR GAME MODES
-// QUESTION: When we run the program below and only click Submit (don't type anything), what appears in the grey box? Which part of the code runs?
+// QUESTION 4: Copy `mode` and `main` below this question into your starter code script.js. When we run the program below and only click Submit (don't type anything), what appears in the grey box? Which part of the code runs?
 var mode = 'green';
 
 var main = function (input) {
+  // QUESTION 5: For the same program, if `bluemode` is typed in (and Submit clicked), what gets displayed in the grey box? Which lines of code run?
   if (input == "greenmode") {
     mode = "green";
   } else if (input == "bluemode") {
     mode = "blue";
   }
 
+  // QUESTION 6: For the same program, what happens if 'blue' is typed in and submitted?
   var myOutputValue =
     "A fool sees not the same tree that a wise man sees. -William Blake";
 
@@ -54,7 +56,3 @@ var main = function (input) {
 
   return myOutputValue;
 };
-
-// QUESTION: For the same program, if `bluemode` is typed in (and Submit clicked), what gets displayed in the grey box? Which lines of code run?
-
-// QUESTION: For the same program, what happens if 'blue' is typed in and submitted?
