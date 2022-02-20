@@ -77,14 +77,15 @@ daysOfTheWeek[1]; // gives us Tuesday.
 // We can get the length of an array through arrayName.length - this is a method which all arrays have access to.
 daysOfTheWeek.length // gives us 7
 
-// QUESTION: Given what we know above, how we can always access the last element of an array no matter what the size is?
+// QUESTION 1: There are no code examples for this question. Given what we know above, how we can always access the last element of an array no matter what the size is?
 
-// QUESTION: How do we change the 'e' to a 'd' in the array below?
+// QUESTION 2: Copy `letters` below this question into your Chrome Dev Tools console. How do we change the 'e' to a 'd' in the array below?
 var letters = ['a', 'b', 'c', 'e']
 
-// QUESTION: What happens if we try to access an index that doesn't exist?
+// QUESTION 3: Copy `letters2` below this question into your Chrome Dev Tools console. What happens if we try to access an index that doesn't exist, like `letters[99]`?
+var letters2 = ['a', 'b', 'c', 'd']
 
-// QUESTION: How does this dice guessing game work?
+// QUESTION 4: Copy `guesses` and `main` below this question into your starter code home page script.js. How does this dice guessing game work?
 var guesses = [];
 var main = function (input) {
   guesses.push(input);
@@ -98,21 +99,21 @@ var main = function (input) {
 
 // 3.5: LOOPING OVER AN ARRAY
 // Using the length of an array, we can simply loop over the elements of an array.
-var letters = ['a', 'b', 'c', 'd', 'e', 'f'];
+var letters3 = ['a', 'b', 'c', 'd', 'e', 'f'];
 
 var main = function (input) {
   var myOutputValue = '';
   var counter = 0;
 
-  while (counter < letters.length) {
-    console.log(letters[counter]);
+  while (counter < letters3.length) {
+    console.log(letters3[counter]);
     myOutputValue = myOutputValue + 'yes';
     counter = counter + 1;
   }
   return myOutputValue;
 };
 
-// QUESTION: This is a sample code snippet of a phone book. Explain what this code does.
+// QUESTION 5: Copy `names` and `main` below this question into your starter code home page script.js. This is a sample code snippet of a phone book. Explain what this code does.
 var names = [];
 var main = function (input) {
   var found = false;
