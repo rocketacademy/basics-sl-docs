@@ -1,4 +1,4 @@
-// QUESTION 1: Copy all of the code below this question into your starter code root script.js. By only reading it (without running the code), what does it do?
+// QUESTION 1: Copy all of the code below this question into your starter code home page script.js. By only reading it (without running the code), what does it do?
 var main = function (input) {
   var myOutputValue = '';
   // sideLength represents the length of each side of the square

@@ -4,7 +4,7 @@
 
 Today is the last course day before the final project presentation. Unlike other project submissions this one is meant so that students will be able to review each other's work before they present the finished version.
 
-## 2.5 Advanced Debugger with Sources Tab
+## [2.5 Advanced Debugger with Sources Tab](https://codingbasics.rocketacademy.co/modules/2-structuring-and-debugging-code/2.5-advanced-debugger)
 
 ### Overview
 
@@ -12,7 +12,7 @@ We've already seen debugging with the simple tool of `console.log`. Sometimes th
 
 ### Code Examples and Discussion Questions
 
-**Question 1:** Copy all of the code below this question into your starter code root script.js. By only reading it (without running the code), what does it do?
+**Question 1:** Copy all of the code below this question into your starter code home page script.js. By only reading it (without running the code), what does it do?
 
 **Answer 1:** Two loops create a square emoji figure. The condition evaluates if the loops are at an edge. An edge is defined as being either: (a) Beginning of either loop, or (b) end of either loop. 
 
@@ -69,6 +69,14 @@ Assuming the same breakpoints as Question 2, and the same input of `3`, running 
 <img width="1205" alt="Screenshot 2022-02-20 at 3 22 44 AM" src="https://user-images.githubusercontent.com/7672836/154815882-7c365a4b-7f50-420d-9668-7dd1aa1ba0dd.png">
 
 This means that `(outerCounter == 0)` and `(innerCounter == 0)` are `true` in the first iteration (first time the loop runs).
+
+## In-Class Material
+
+### Link to Exercises
+
+[Redux: Blackjack](https://codingbasics.rocketacademy.co/coursework/projects/project-3-blackjack)
+
+[Pairwork: Blackjack (More Comfortable)](https://codingbasics.rocketacademy.co/coursework/projects/project-3-blackjack#more-comfortable)
 
 ## Wrap-Up / Look Ahead
 
