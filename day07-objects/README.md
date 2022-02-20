@@ -247,3 +247,11 @@ var makeDeck = function () {
 The Document Object Model (DOM) and manipulating it are intended to connect back together JavaScript code that would usually be written outside the context of the starter code. It ties together the students' fundamental understanding of HTML and CSS, together with the logic written in JavaScript.
 
 It also details how the starter code works.
+
+## Post-Class: Begin Project
+
+Introduce the project: [Project 3 Blackjack](https://codingbasics.rocketacademy.co/coursework/projects/project-3-blackjack).
+
+Subsequent in-class sessions after today will largely involve pair work on students' Blackjack project. Do remind the students it's still preferable to start early and have some of their work done after class. Pair programming sessions will not be as fruitful if any one in the pair group have not attempted to start.
+
+Make sure everyone understands when each phase of the project is due. With an ideal pace, they should have completed the Base requirements by Day 9 and be ready to embark on the Comfortable requirements.

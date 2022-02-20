@@ -75,3 +75,11 @@ Students will begin working on [Project 2: Beat That!](https://basics.rocketacad
 Given what we have known so far about the different data types, global values and control flow, we will begin building programs that can ask for different kinds of input. Next, we will be looking at techniques for verifying this input.
 
 Additionally, we will be introducing HTML and CSS. Being able to structure and layout their pages, together with peppering their pages with user-friendly feedback, should allow students to embark on exploring customisations on their starter code templates for projects.
+
+## Post-Class: Begin Project 2 Beat That!
+
+Introduce the project: [Beat That!](https://basics.rocketacademy.co/projects/project-2-beat-that) Unlike Project 1 Scissors Paper Stone, Project 2 Beat That! will not be split into phases.
+
+Time management is paramount, and students will have to learn to pace themselves while working on the project. Of course, students hoping to embark on the [Comfortable](https://basics.rocketacademy.co/projects/project-2-beat-that#comfortable) and [More Comfortable](https://basics.rocketacademy.co/projects/project-2-beat-that#more-comfortable) requirements will have to plan their time well for the next 1 week.
+
+Make sure everyone understands when the project is due.
