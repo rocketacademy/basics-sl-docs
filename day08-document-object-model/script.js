@@ -1,6 +1,6 @@
-// 6.1 The Document Object Model
+// 6.1 BROWSER APPLICATION WITH DOM
 
-// QUESTION 1: Copy all of the code below this question into your starter code root script.js. What does the first line where newButton is initialised do?
+// QUESTION 1: Copy all of the code below this question into your starter code home page script.js. What does the first line where `newButton` is initialised do?
 var newButton = document.querySelector("#submit-button");
 
 var main = function (input) {
@@ -8,7 +8,7 @@ var main = function (input) {
   return myOutputValue;
 };
 
-// QUESTION 2: Copy all of the code below this question into your starter code root script.js. Given this newButton variable, how will we change the text displayed in it to say "Click me!" instead?
+// QUESTION 2: Copy all of the code below this question into your starter code home page script.js. Given this `newButton` variable, how will we change the text displayed in it to say "Click me!" instead?
 var newButton = document.querySelector("#submit-button");
 
 var main = function (input) {
@@ -16,7 +16,7 @@ var main = function (input) {
   return myOutputValue;
 };
 
-// QUESTION 3: Copy all of the code below this question into your starter code root script.js. What does this program do?
+// QUESTION 3: Copy all of the code below this question into your starter code home page script.js. What does this program do?
 var container = document.querySelector('.container');
 
 var main = function (input) {
@@ -27,7 +27,7 @@ var main = function (input) {
   return myOutputValue;
 };
 
-// 6.1 DOM Manipulation
+// 6.1 DOM MANIPULATION
 
 // QUESTION 4: Refer to this block of code in the starter code home page HTML file (it's copied below this question for the SL's reference). What does this code do?
 
@@ -49,7 +49,7 @@ button.addEventListener("click", function () {
   input.value = "";
 });
 
-// QUESTION 5: Demonstrate all of the code below this question using the starter code. Let's create a "Click Me!" button next to the original Submit button. We will attach an event listener to it. What does the button do?
+// QUESTION 5: Demonstrate all of the code below this question using the starter code home page. Let's create a "Click Me!" button next to the original Submit button. We will attach an event listener to it. What does the button do?
 
 // Sample "Click Me!" button to be copied and pasted into index.html
 // <button id="click-me-button">Click Me!</button>

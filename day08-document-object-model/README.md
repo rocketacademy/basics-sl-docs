@@ -4,7 +4,7 @@
 
 The day's pre-class material is mainly an investigation into what is possible with JavaScript given the tools that have already been covered, including HTML and CSS.
 
-## 6.1: The Document Object Model
+## 6.1: [Browser Application with DOM](https://codingbasics.rocketacademy.co/modules/6-document-object-model/6.1-the-document-object-model)
 
 ### Overview
 
@@ -19,17 +19,17 @@ Chiefly, SLs have to be able to explain the DOM and its uses. In code, the DOM i
 
 Almost every website now uses the DOM to display things on the screen. Google Sheets is a good example (click [here](https://docs.google.com/spreadsheets/d/1LjRxTu0E9lwAPRYc_WFYsFEAA4WAEjAP65igIHm_PwY/edit?usp=sharing) for a sample template).
 
-Google sheets uses the DOM in combination with all of the data in the Google Sheets database to create and update the screen that users see. The data that is displayed on the page is represented as arrays and strings and objects inside the Google system (among other representations) and is displayed on the screen of the browser using the DOM.
+Google Sheets uses the DOM in combination with all of the data in the Google Sheets database to create and update the screen that users see. The data that is displayed on the page is represented as arrays and strings and objects inside the Google system (among other representations) and is displayed on the screen of the browser using the DOM.
 
 ### Code Examples and Discussion Questions
 
-**Question 1:** Copy all of the code below this question into your starter code root script.js. What does the first line where newButton is initialised do?
+**Question 1:** Copy all of the code below this question into your starter code home page script.js. What does the first line where `newButton` is initialised do?
 
 **Answer 1:** It selects the HTML element with the ID (marked by `#`) `submit-button` so that you can manipulate it in your JavaScript code.
 
 We can do a `console.log(newButton);` just to show students that the button is successfully selected.
 
-**Question 2:** Copy all of the code below this question into your starter code root script.js. Given this newButton variable, how will we change the text displayed in it to say "Click me!" instead?
+**Question 2:** Copy all of the code below this question into your starter code home page script.js. Given this `newButton` variable, how will we change the text displayed in it to say "Click me!" instead?
 
 **Answer 2:** We can do so this way:
 
@@ -63,7 +63,7 @@ var main = function (input) {
 };
 ```
 
-**Question 3:** Copy all of the code below this question into your starter code root script.js. What does this program do?
+**Question 3:** Copy all of the code below this question into your starter code home page script.js. What does this program do?
 
 **Answer 3:** The first line selects the white container in the starter code.
 
@@ -120,7 +120,7 @@ Next, we can begin looking at creating our own basic event handlers and listener
 * This `result` variable's value is then printed into the grey output box, selected using the `output` variable.
 * At the end, we reset what's typed in the input field for the convenience of users keying in new inputs.
 
-**Question 5:** Demonstrate all of the code below this question using the starter code. Let's create a "Click Me!" button next to the original Submit button. We will attach an event listener to it. What does the button do?
+**Question 5:** Demonstrate all of the code below this question using the starter code home page. Let's create a "Click Me!" button next to the original Submit button. We will attach an event listener to it. What does the button do?
 
 **Answer 5:** You may want to break this question up, to get different students to explain the code snippet 1 student per line. The gist is we now have a button that randomly sets a new background color to the original white container. Sequentially:
 
@@ -128,6 +128,12 @@ Next, we can begin looking at creating our own basic event handlers and listener
 * We select it using the `.querySelector` method in the script.
 * We add a click event listener to it.
 * On clicking the button, it selects the container, and then sets a randomly generated background color to it. The range of colors are pre-defined in an array.
+
+## In-Class Material
+
+### Link to Exercises
+
+[Pairwork: Blackjack](https://codingbasics.rocketacademy.co/coursework/projects/project-3-blackjack)
 
 ## Wrap-Up / Look Ahead
 
