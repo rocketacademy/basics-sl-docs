@@ -76,6 +76,8 @@ All the control flow syntax is combinable. A loop can call a function. A functio
 
 [Loops (first 30 minutes)](https://codingbasics.rocketacademy.co/coursework/in-class-exercises/day-4-loops)
 
+Students can pick one of: Emoji Drawing, or Multi-Dice Game.
+
 [Redux: Scissors Paper Stone (last 30 minutes)](https://codingbasics.rocketacademy.co/coursework/projects/project-1-scissors-paper-stone/project-1-scissors-paper-stone-part-2)
 
 ### Redux: Read (Individual) 
