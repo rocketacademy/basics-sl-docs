@@ -8,7 +8,7 @@ We may or may not have introduced the important JavaScript topic of language dat
 
 We will be formally addressing this topic today, as well as beginning to talk about page layouts and design through HTML and CSS.
 
-## 3.6 Input Validation
+## [3.6 Input Validation](https://codingbasics.rocketacademy.co/modules/3-logic-and-control-flow/3.6-input-validation)
 
 ### Overview
 
@@ -61,7 +61,7 @@ isNaN("foo" / "bar");
 
 ### Code Examples and Discussion Questions
 
-**Question 1:** Run these 2 lines in the browser console. What is the difference between these 2 lines?
+**Question 1:** Run these 2 lines in the Chrome Dev Tools console. What is the difference between these 2 lines?
 
 **Answer 1:** The first line is of a string type, while the second line is of a number type.
 
@@ -74,13 +74,13 @@ typeof 444; // returns 'number'
 
 It is also a good opportunity to revise the differences between string and number operations again, by asking students what they can do with string values and what they can do with number values. Hint: `+` works differently on strings and numbers.
 
-**Question 2:** Run these 2 lines in the browser console. What values are the result of these 2 statements?
+**Question 2:** Run these 2 lines in the Chrome Dev Tools console. What values are the result of these 2 statements?
 
 **Answer 2:** The first line gives `NaN`, and the second line gives the number `888`.
 
 Take the opportunity to ask students why the first line gives `NaN`. We are getting `NaN` because we are attempting to perform a number operation (multiplication) on the string `'papaya'`.
 
-**Question 3:** What does this program do?
+**Question 3:** Copy and paste the `main` function below this question into your starter code home page script.js. What does this program do?
 
 **Answer 3:** Checks what the user typed to make sure they typed a number. If they did, consider the user input to be a number in miles, and convert it to kilometres. If not, let the user know to input a number.
 
@@ -88,7 +88,7 @@ Place emphasis on the input validation aspect, for students who may still be unf
 
 **Question 4:** What's the alternative to doing a `return` in this conditional block?
 
-**Answer 4:** This is a tricky question, and it can be structured as a demonstration instead of a question to any particular student. It requires understanding code structure in control flow, and the requirements of having `if ... else` chains, compared to using just `if` conditions.
+**Answer 4:** This is a tricky question to answer, and it can be structured as a demonstration instead of a question to any particular student. It requires understanding code structure in control flow, and the requirements of having `if ... else` chains, compared to using just `if` conditions.
 
 The alternative is having `if ... else` code blocks instead of a single `if`.
 
@@ -96,15 +96,15 @@ With a single `if` as it is now, you will need an "early `return`", so that the 
 
 With the alternative version using `if` and `else`, you have to indent the main part of the program. In general it's easier to read code that is refactored to be less indented. In very extreme examples of control flow, you might have to nest 10 times, with one condition inside another, inside another, etc.
 
-## 5.1 HTML
+## [5.1 HTML](https://codingbasics.rocketacademy.co/modules/5-html-and-css/5.1-html)
 
 ### Overview
 
 Starting from HTML and combined with CSS, students should know we are beginning to look into how we can lay pages out, and design them. 
 
-By the end of these 2 sections, they should have the fundamental tools to begin modifying their template starter codes. Do encourage them to experiment with the layout and design of their projects, with Project 2: Beat That! due by the next lesson.
+By the end of these 2 sections, they should have the fundamental tools to begin modifying their template starter codes. Do encourage them to experiment with the layout and design of their projects, with [Project 2: Beat That!](https://codingbasics.rocketacademy.co/coursework/projects/project-2-beat-that) due by the next lesson.
 
-We can follow up the 3.6 Input Validation by using HTML to provide useful feedback messages to users. What kind of input is the system expecting the user to type in?
+We can follow up the [3.6 Input Validation](https://codingbasics.rocketacademy.co/modules/3-logic-and-control-flow/3.6-input-validation) module by using HTML to provide useful feedback messages to users. What kind of input is the system expecting the user to type in?
 
 Do demonstrate and explain the common HTML elements listed on the students' Gitbook view, namely:
 
@@ -269,6 +269,12 @@ and the following CSS:
 ```
 
 The text "Hello World!" will be blue, even though the `#hello` selector is before the `.hello` selector (rule order). This is because `#hello` is more specific than `.hello`.
+
+## In-Class Material
+
+### Link to Exercises
+
+[Pairwork: Beat That!](https://codingbasics.rocketacademy.co/coursework/projects/project-2-beat-that)
 
 ## Look Ahead / Wrap Up
 

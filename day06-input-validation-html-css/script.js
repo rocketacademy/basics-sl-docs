@@ -1,13 +1,13 @@
 // 3.6: INPUT VALIDATION
-// QUESTION 1: Run these 2 lines in the browser console. What is the difference between these 2 lines?
+// QUESTION 1: Run these 2 lines in the Chrome Dev Tools console. What is the difference between these 2 lines?
 '444';
 444;
 
-// QUESTION 2: Run these 2 lines in the browser console. What values are the result of these 2 statements?
+// QUESTION 2: Run these 2 lines in the Chrome Dev Tools console. What values are the result of these 2 statements?
 444 * 'papaya';
 444 * 2;
 
-// QUESTION 3: What does this program do?
+// QUESTION 3: Copy and paste the `main` function below this question into your starter code home page script.js. What does this program do?
 var main = function (input) {
   var miles = Number(input);
 
