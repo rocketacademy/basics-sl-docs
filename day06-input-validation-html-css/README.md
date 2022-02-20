@@ -188,7 +188,7 @@ For inculcating good practice, HTML should always be structured semantically. If
 
 If the text isn't meant to be structured like a paragraph, like a single line or a single word, using a `<div>` is fine.
 
-## 5.2 Cascading Style Sheets (CSS)
+## [5.2 Cascading Style Sheets (CSS)](https://codingbasics.rocketacademy.co/modules/5-html-and-css/css)
 
 ### Overview
 
