@@ -173,6 +173,6 @@ Just the conditionals syntax in this day is a huge amount of possible complexity
 
 ## Post-Class: Begin Project
 
-Introduce the project. Scissors Paper Stone is split into two parts. The second part will use global variables to keep track of game state.
+Introduce the project. Scissors Paper Stone is split into two parts. Part I's link is [here](https://codingbasics.rocketacademy.co/coursework/projects/project-1-scissors-paper-stone/project-1-scissors-paper-stone-part-1). The [second part](https://codingbasics.rocketacademy.co/coursework/projects/project-1-scissors-paper-stone/project-1-scissors-paper-stone-part-2) will use global variables to keep track of game state.
 
-Make sure everyone understands when the project is due.
+Make sure everyone understands when each phase of the project is due.
