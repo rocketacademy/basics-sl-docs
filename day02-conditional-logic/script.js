@@ -1,14 +1,18 @@
 // 2.3.2: FUNCTIONS II
 // We can have more than 1 parameter in a function.
 var add = function(a,b){
-    console.log(`this is a: ${a}`)
-    console.log(`this is b: ${b}`)
-    return a + b;
+  return a + b;
 };
 // We can also store the result (return value) of a function execution
 // in a variable.
 var result = add(1,2);
-// QUESTION: What will `console.log` results be for the following 2 lines?
+
+// QUESTION 1: Copy the `add` function and `result2` and `result3` variables below this question into the Chrome Dev Tools console. What will `console.log` results be in the `add` function when executing it for `result2` and `result3`?
+var add = function(a,b){
+    console.log(`this is a: ${a}`)
+    console.log(`this is b: ${b}`)
+    return a + b;
+};
 var result2 = add(1,2);
 var result3 = add(2,1);
 
@@ -19,14 +23,17 @@ var blah = function () {
   return 1 + 2;
 }
 
-// QUESTION: What will `addMultiple` return? Why?
+// QUESTION 2: Copy the `add` and `addMultiple` functions into your Chrome Dev Tools console. What will `addMultiple` return? Why?
+var add = function(a,b){
+    return a + b;
+};
 var addMultiple = function(input){
     var myOutputValue = add(1,add(2,3));
     return myOutputValue;
 };
 
 // 2.4 ERRORS
-// QUESTION: What is the difference between a compile-time error and a run-time error?
+// QUESTION 3: Copy and paste `kilometersToMiles` and `myOutputValue` into your starter code home page script.js. What is the difference between a compile-time error and a run-time error?
 // Compile-time Error
 var kilometersToMiles = function distanceInKilometers) {
   var distanceInMiles = distanceInKilometers * 0.62;
@@ -36,7 +43,7 @@ var kilometersToMiles = function distanceInKilometers) {
 var myOutputValue = 'hello world'();
 
 // 3.2 CONDITIONALS
-// QUESTION: How would we get `"hello friend"` to be printed?
+// QUESTION 4: Copy the `main` function below this question into your starter code home page script.js. How would we get `"hello friend"` to be printed?
 var main = function (input) {
   // Set a default value for myOutputValue
   var myOutputValue = "hello world";
@@ -48,7 +55,11 @@ var main = function (input) {
   return myOutputValue;
 };
 
-// QUESTION: What is the string printed by this function? Should I get `"you entered the number 3."` or `"you may or may not have entered the number 3."`?
+// QUESTION 5: Run the initialisation of `test1` and `test2` below this question into your Chrome Dev Tools console. What would their values be?
+var test1 = (1 + 2 === 3);
+var test2 = (1 + 1 === 3);
+
+// QUESTION 6: Copy the `main` function below this question into your starter code home page script.js. What is the string printed by this function? Should I get `"you entered the number 3."` or `"you may or may not have entered the number 3."`?
 var main = function (input) {
   // Set a default value for myOutputValue
   var myOutputValue = "hello world";
@@ -66,7 +77,7 @@ var main = function (input) {
 };
 
 // 3.1 INTRO TO LOGIC AND CONTROL FLOW (CONTINUED) 
-// QUESTION: How would we change this such that we get a 20 sided dice instead?
+// QUESTION 7: Copy and paste this `rollDice` function below the question into your Chrome Dev Tools console. How would we change this such that we get a 20 sided dice instead?
 var rollDice = function () {
   // Generate a decimal from 0 through 6, inclusive of 0 and exclusive of 6.
   var randomDecimal = Math.random() * 6;
@@ -80,11 +91,9 @@ var rollDice = function () {
 
   return diceNumber;
 };
-// ANS: Change the multiplication in randomDecimal to be * 20 instead.
-var randomDecimal = Math.random() * 20;
 
 // 3.3 BOOLEAN OPERATORS
-// QUESTION: If I want to turn the random dice roll app into a dice game, I will change the the logic in the `main` function to incorporate winning conditions. What is the winning condition here?
+// QUESTION 8: Copy and paste the `rollDice` and `main` functions below this question into your starter code home page script.js. If I want to turn the random dice roll app into a dice game, I will change the the logic in the `main` function to incorporate winning conditions. What is the winning condition here?
 var rollDice = function () {
   // Generate a decimal from 0 through 6, inclusive of 0 and exclusive of 6.
   var randomDecimal = Math.random() * 6;
@@ -116,7 +125,20 @@ var main = function (input) {
   return myOutputValue;
 };
 
-// QUESTION: The following program allows the user to win only if the input matches both random dice numbers. How would I add a third dice to the below function and ensure that the user wins if the input matches all 3 dice numbers?
+// QUESTION 9: Copy and paste the `rollDice` and `main` functions below this question into your starter code home page script.js. The following program allows the user to win only if the input matches both random dice numbers. How would I add a third dice to the below function and ensure that the user wins if the input matches all 3 dice numbers?
+var rollDice = function () {
+  // Generate a decimal from 0 through 6, inclusive of 0 and exclusive of 6.
+  var randomDecimal = Math.random() * 6;
+
+  // Remove the decimal with the floor operation.
+  // This will be an integer from 0 to 5 inclusive.
+  var randomInteger = Math.floor(randomDecimal);
+
+  // Add 1 to get valid dice rolls of 1 through 6 inclusive.
+  var diceNumber = randomInteger + 1;
+
+  return diceNumber;
+};
 var main = function (input) {
   var randomDiceNumber1 = rollDice();
   var randomDiceNumber2 = rollDice();
@@ -129,7 +151,20 @@ var main = function (input) {
   return myOutputValue;
 };
 
-// QUESTION: How will I flip the conditions of the code before (or below), such that the user wins if the input does not match the 3 dice numbers?
+// QUESTION 10: Copy and paste the `rollDice` and `main` functions below this question into your starter code home page script.js. How will I flip the conditions of the code before (or below), such that the user wins if the input does not match the 3 dice numbers?
+var rollDice = function () {
+  // Generate a decimal from 0 through 6, inclusive of 0 and exclusive of 6.
+  var randomDecimal = Math.random() * 6;
+
+  // Remove the decimal with the floor operation.
+  // This will be an integer from 0 to 5 inclusive.
+  var randomInteger = Math.floor(randomDecimal);
+
+  // Add 1 to get valid dice rolls of 1 through 6 inclusive.
+  var diceNumber = randomInteger + 1;
+
+  return diceNumber;
+};
 var main = function (input) {
   var randomDiceNumber1 = rollDice();
   var randomDiceNumber2 = rollDice();
@@ -143,7 +178,7 @@ var main = function (input) {
   return myOutputValue;
 };
 
-// QUESTION: It can be tricky testing the `rollDice` function, given that it will generate a new random number of each execution. If I want to test the `rollDice` function constantly against the input of `"1"`, how will I change the `rollDice` code?
+// QUESTION 11: Copy and paste the `rollDice` function below into your Chrome Dev Tools console. It can be tricky testing the `rollDice` function, given that it will generate a new random number of each execution. If I want to test the `rollDice` function constantly against the input of `"1"`, how will I change the `rollDice` code?
 var rollDice = function () {
   var randomDecimal = Math.random() * 6;
   var randomInteger = Math.floor(randomDecimal);
