@@ -16,7 +16,7 @@ Spend some time introducing the various levels of scoping to the students, using
 
 Do duplicate and replicate the code yourself to ensure you have complete familiarity of the structure of the examples. You can structure the demonstration as a debate, asking the students the same questions asked pertaining to the code examples in the module pre-class.
 
-## 4.2 Program Lifecycle and State
+## [4.2 Program Lifecycle and State](https://codingbasics.rocketacademy.co/modules/4-scope/4.2-program-lifecycle-and-state)
 
 ### Overview
 
