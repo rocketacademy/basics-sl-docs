@@ -4,7 +4,7 @@
 
 The day's pre-class material is mainly an investigation into what is possible with JavaScript given the tools that have already been covered, including HTML and CSS.
 
-## 6.1: [Browser Application with DOM](https://codingbasics.rocketacademy.co/modules/6-document-object-model/6.1-the-document-object-model)
+## [6.1: Browser Application with DOM](https://codingbasics.rocketacademy.co/modules/6-document-object-model/6.1-the-document-object-model)
 
 ### Overview
 
@@ -73,7 +73,7 @@ There's a caveat: all of our input (previous or current) will also be printed as
 
 Since we are using the `.appendChild` method, every new paragraph will be inserted (as a child) to the bottom of the container. Thus, the paragraphs are seemingly sorted from oldest to latest.
 
-## 6.2: DOM Manipulation
+## [6.2: DOM Manipulation](https://codingbasics.rocketacademy.co/modules/6-document-object-model/6.2-dom-manipulation#complete-applications-with-dom)
 
 ### Overview
 
