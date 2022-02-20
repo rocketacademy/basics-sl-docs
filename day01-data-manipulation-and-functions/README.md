@@ -94,7 +94,7 @@ There won't be specific code examples provided in `script.js` for this section, 
 
 **Answer:** Use `input` as part of the `myOutputValue` variable, or assign `input` directly to `myOutputValue`.
 
-## 2.3.1 Functions I
+## [2.3.1 Functions I](https://codingbasics.rocketacademy.co/modules/2-structuring-and-debugging-code/2.3-functions/2.3.1-functions)
 
 The Basics curriculum is trying to emphasize functions as the most important unit of computation. The idea is that when the computer must do something the easiest way to think about it is wrapped in a function.
 
