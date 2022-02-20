@@ -1,14 +1,14 @@
-// 1.4: Objects
+// 1.4: OBJECTS
 
-// QUESTION 1: Demonstrate this using the Chrome Dev Tools console. What is problematic with this approach of using 2 named arrays to store names and numbers in a phonebook?
+// QUESTION 1: Copy `namesInPhonebook` and `numbersInPhonebook` into the Chrome Dev Tools console. What is problematic with this approach of using 2 named arrays to store names and numbers in a phonebook?
 var namesInPhonebook = ['Chee Kean', 'Susan Chan', 'Kai'];
 var numbersInPhonebook = ['+65 9111 1111', '+65 9222 2222', '+65 9333 3333'];
 
-// QUESTION 2: Demonstrate this using the Chrome Dev Tools console. In the line below, what will be the pseudocode for getting the numerical sum of the ranks?
-var cardDeck = ['nine of hearts', 'ten of hearts', 'jack of hearts'];
+// QUESTION 2: Copy `cardDeck2` into the Chrome Dev Tools console. What will be the pseudocode for getting the numerical sum of the ranks?
+var cardDeck2 = ['nine of hearts', 'ten of hearts', 'jack of hearts'];
 
-// QUESTION 3: Demonstrate this using the Chrome Dev Tools console. Now we have 3 cards (items) in the `cardDeck` array. How do I access the second card? What if I only wanted to access its name?
-var cardDeck = [
+// QUESTION 3: Copy `cardDeck3` into the Chrome Dev Tools console. Now we have 3 cards (items) in the `cardDeck` array. How do I access the second card? What if I only wanted to access its name?
+var cardDeck3 = [
   {
     rank: 9,
     suit: 'hearts',
@@ -26,8 +26,8 @@ var cardDeck = [
   }
 ];
 
-// QUESTION 4: Demonstrate this using the Chrome Dev Tools console. How can the suit of the first card be changed to 'diamonds'?
-var cardDeck = [
+// QUESTION 4: Copy `cardDeck4` into the Chrome Dev Tools console. How can the suit of the first card be changed to 'diamonds'?
+var cardDeck4 = [
   {
     rank: 9,
     suit: 'hearts',
@@ -45,8 +45,8 @@ var cardDeck = [
   }
 ];
 
-// QUESTION 5: Demonstrate this using the Chrome Dev Tools console. Now that the first card's suit is changed to 'diamonds', I want to add a symbol key to match its suit name, ie. ⬥. How will I do it? 
-var cardDeck = [
+// QUESTION 5: Copy `cardDeck5` into the Chrome Dev Tools console. Now that the first card's suit is changed to 'diamonds', I want to add a symbol key to match its suit name, ie. ⬥. How will I do it? 
+var cardDeck5 = [
   {
     rank: 9,
     suit: 'diamonds',
@@ -64,7 +64,7 @@ var cardDeck = [
   }
 ];
 
-// QUESTION 6: Demonstrate all of the code below this question using the starter code. This is a game that draws 1 card each for the player and the computer, and the highest card wins. What would need to change so that the highest card loses instead?
+// QUESTION 6: Copy all of the code below this question into the starter code home page script.js. This is a game that draws 1 card each for the player and the computer, and the highest card wins. What would need to change so that the highest card loses instead?
 var deck = [
   {
     name: 'ace',
@@ -366,10 +366,10 @@ var main = function (input) {
   return myOutputValue;
 };
 
-// 3.7 Creating Objects with Loops
+// 3.7 CREATING OBJECTS WITH LOOPS
 
-// QUESTION 7: Demonstrate this using the Chrome Dev Tools console. Have a look at this original example of setting up an entire deck of cards (array of objects). What could be problematic with this approach?
-var deck = [
+// QUESTION 7: Copy `deck7` into your Chrome Dev Tools console. Have a look at this original example of setting up an entire deck of cards (array of objects). What could be problematic with this approach?
+var deck7 = [
   {
     name: 'ace',
     suit: 'hearts',
@@ -632,7 +632,7 @@ var deck = [
   },
 ];
 
-// QUESTION 8: Demonstrate all of the code below this question using the starter code. The comments have been stripped from the `makeDeck` function. Have students run through the logic of `makeDeck` line by line.
+// QUESTION 8: Copy all of the code below this question into your starter code home page script.js. The comments have been stripped from the `makeDeck` function. Have students run through the logic of `makeDeck` line by line.
 
 var makeDeck = function () {
   var cardDeck = [];
@@ -692,7 +692,7 @@ var main = function (input) {
   return myOutputValue;
 };
 
-// QUESTION 9: Demonstrate all of the code below this question using the starter code. The `printDeck` function has been edited to show the symbol of the suit, instead of its textual name. How will we add the symbol of the suit in the `makeDeck` function, assuming its key is `symbol`? Template symbols for copying and pasting: ♥️, ♦️, ♣️, ♠️
+// QUESTION 9: Copy all of the code below this question into your starter code home page script.js. The `printDeck` function has been edited to show the symbol of the suit, instead of its textual name. How will we add the symbol of the suit in the `makeDeck` function, assuming its key is `symbol`? Template symbols for copying and pasting: ♥️, ♦️, ♣️, ♠️
 
 var makeDeck = function () {
   var cardDeck = [];
